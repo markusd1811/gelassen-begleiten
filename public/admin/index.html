@@ -18,24 +18,31 @@
             margin: 0 auto 2rem;
         }
 
-        /* Top Header Logo Styling */
+        /* Top Header Logo Styling - Refined to prevent overlap */
+        header a[href="#/"],
         header [class*="AppHeaderLogo"],
-        header [class*="LogoContainer"],
-        header a[href="#/"] {
+        header [class*="LogoContainer"] {
             background: url('/images/logo_gb.png') no-repeat left center !important;
             background-size: contain !important;
-            width: 140px !important;
-            height: 30px !important;
-            margin-right: 20px !important;
+            width: 180px !important;
+            /* Increased width to accommodate logo + spacer */
+            height: 34px !important;
+            margin-right: 40px !important;
+            /* More space to the first menu item */
             color: transparent !important;
-            display: flex !important;
-            align-items: center;
+            display: inline-block !important;
+            position: relative !important;
+            flex-shrink: 0 !important;
         }
 
-        /* Ensure the header content doesn't overlap */
-        header>div {
-            display: flex;
-            align-items: center;
+        /* Ensure nav items are pushed to the right */
+        header nav {
+            margin-left: 20px !important;
+        }
+
+        /* Clean up the header appearance */
+        header {
+            padding: 0 20px !important;
         }
     </style>
 </head>
