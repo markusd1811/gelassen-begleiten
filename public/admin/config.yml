@@ -12,14 +12,14 @@ public_folder: "/images"
 locale: "de"
 
 collections:
-  - name: "content_hub"
-    label: "📢 Content Hub (Hauptseiten)"
+  - name: "main_structure"
+    label: "🏗️ Website Zentrale"
     files:
       - label: "🏠 Startseite"
         name: "home"
         file: "src/data/home.json"
         fields:
-          - label: "Hero Bereich"
+          - label: "Hero Bereich (Ganz oben)"
             name: "hero"
             widget: "object"
             fields:
@@ -27,40 +27,73 @@ collections:
               - {label: "Titel (Normal)", name: "title_main", widget: "string"}
               - {label: "Titel (Hervorgehoben)", name: "title_highlight", widget: "string"}
               - {label: "Untertitel", name: "subtitle", widget: "text"}
-              - {label: "Bild", name: "image", widget: "image", hint: "Format: Querformat (z.B. 1920x1080px). Fokus mittig oder rechts halten. Max. 300KB."}
-          - label: "Problem Bereich"
+              - {label: "Hero Bild", name: "image", widget: "image", hint: "Format: Querformat (z.B. 1920x1080px). WICHTIG: Max. 300KB!"}
+          - label: "Problem Bereich (Angst/Sorgen)"
             name: "problem"
             widget: "object"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Einleitungstext", name: "text", widget: "text"}
-          - label: "Methoden Bereich"
+          - label: "Methoden Vorschau"
             name: "methode"
             widget: "object"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Text", name: "text", widget: "markdown"}
-              - {label: "Bild", name: "image", widget: "image", hint: "Format: 1200x800px oder ähnlich. Max. 250KB."}
+              - {label: "Symbol/Bild", name: "image", widget: "image", hint: "Format: ca. 1200x800px. Max. 250KB."}
           - label: "Über Mich Kurzvorschau"
             name: "about"
             widget: "object"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Text", name: "text", widget: "markdown"}
-              - {label: "Bild", name: "image", widget: "image", hint: "Format: Quadratisch (z.B. 800x800px). Zeigt Laura. Max. 200KB."}
+              - {label: "Profilbild Laura", name: "image", widget: "image", hint: "Format: QUADRAT (z.B. 800x800px). Max. 200KB."}
 
-  - name: "pages"
-    label: "📄 Hauptnavigation & Beratung"
-    folder: "src/content/pages"
-    create: true
-    slug: "{{slug}}"
-    summary: '{{title}}'
-    fields:
-      - {label: "Titel (H1)", name: "title", widget: "string"}
-      - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
-      - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
-      - {label: "Hauptbild", name: "image", widget: "image", required: false, hint: "Optimale Breite: 1200px. Max. 300KB."}
-      - {label: "Inhalt", name: "body", widget: "markdown"}
+      - label: "💜 LilaLiebe® Konzept"
+        name: "lilaliebe"
+        file: "src/content/pages/lilaliebe.md"
+        fields: &page_fields
+          - {label: "Seitentitel", name: "title", widget: "string"}
+          - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
+          - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
+          - {label: "Answer Capsule (Zusammenfassung)", name: "answer_capsule", widget: "text", required: false}
+          - {label: "Hauptbild oben", name: "image", widget: "image", required: false, hint: "Querformat 1200px Breite. Max. 300KB."}
+          - {label: "Seiteninhalt", name: "body", widget: "markdown"}
+
+      - label: "💡 Die Methode (GFK)"
+        name: "methode"
+        file: "src/content/pages/methode.md"
+        fields: *page_fields
+
+      - label: "🙋‍♀️ Über mich"
+        name: "about"
+        file: "src/content/pages/ueber-mich.md"
+        fields: *page_fields
+
+      - label: "❓ FAQ Seite"
+        name: "faq_page"
+        file: "src/content/pages/faq.md"
+        fields: *page_fields
+
+  - name: "coaching"
+    label: "💼 CoachingAngebote"
+    files:
+      - label: "🎧 Audio-Quick-Beratung"
+        name: "audio_quick"
+        file: "src/content/pages/audio-quick-beratung.md"
+        fields: *page_fields
+      - label: "👤 1:1 Coaching"
+        name: "einzelcoaching"
+        file: "src/content/pages/einzelcoaching.md"
+        fields: *page_fields
+      - label: "👥 Paarberatung"
+        name: "paarberatung"
+        file: "src/content/pages/paarberatung.md"
+        fields: *page_fields
+      - label: "💻 Familiencoaching Online"
+        name: "online_coaching"
+        file: "src/content/pages/familiencoaching-online.md"
+        fields: *page_fields
 
   - name: "blog"
     label: "✍️ Impulse (Journal/Blog)"
@@ -72,13 +105,13 @@ collections:
       - {label: "Titel (H1)", name: "title", widget: "string"}
       - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
       - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
-      - {label: "Answer Capsule (GEO)", name: "answer_capsule", widget: "text", required: false, hint: "Kurze, prägnante Antwort auf die Titelfrage (ca. 2-3 Sätze)."}
+      - {label: "Answer Capsule (GEO)", name: "answer_capsule", widget: "text", required: false, hint: "Kurze Zusammenfassung für Suchmaschinen."}
       - {label: "Datum", name: "date", widget: "datetime", required: false}
-      - {label: "Vorschaubild", name: "image", widget: "image", required: false, hint: "Format: Querformat (1200x630px empfohlen). Max 250KB."}
+      - {label: "Vorschaubild", name: "image", widget: "image", required: false, hint: "Format: 1200x630px. Max. 250KB."}
       - {label: "Text", name: "body", widget: "markdown"}
 
   - name: "faq"
-    label: "❓ Fragen & Antworten (FAQ)"
+    label: "🧩 FAQ Bausteine & Entwürfe"
     folder: "src/content/faq"
     create: true
     slug: "{{slug}}"
@@ -87,3 +120,11 @@ collections:
       - {label: "Frage", name: "question", widget: "string"}
       - {label: "Antwort", name: "answer", widget: "text"}
       - {label: "Kategorie", name: "category", widget: "select", options: ["Allgemein", "Methode & Ansatz", "Ablauf & Formate", "Kosten & Buchung", "Für wen ist es geeignet"]}
+
+  - name: "other_pages"
+    label: "🌐 Weitere Einzelseiten"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{title}}'
+    fields: *page_fields
