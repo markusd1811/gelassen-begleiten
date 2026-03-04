@@ -111,6 +111,33 @@ p {
     font-size: clamp(1rem, 1.5vw, 1.15rem);
 }
 
+/* Premium Content Links */
+article a,
+.content-body a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid var(--clr-bg-warm);
+}
+
+article a:hover,
+.content-body a:hover {
+    color: var(--clr-primary-dark);
+    border-bottom-color: var(--clr-primary);
+    background-color: rgba(244, 235, 230, 0.3);
+    /* Subtle highlight on hover */
+}
+
+/* Ensure buttons don't get the underline */
+article a.btn-primary,
+article a.btn-secondary,
+article a.btn-outline,
+.content-body a.btn-primary {
+    border-bottom: none;
+}
+
+
 .highlight {
     color: var(--clr-primary);
     position: relative;
