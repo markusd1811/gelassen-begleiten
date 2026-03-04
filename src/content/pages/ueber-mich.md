@@ -1,23 +1,69 @@
 ---
-title: "Über Laura Drühe – Deine Familiencoach"
-seo_title: "Zertifizierte LilaLiebe®-Beraterin Laura Drühe | Gelassen begleiten"
-seo_description: "Lerne Laura Drühe kennen – zertifizierte LilaLiebe®-Beraterin und Familiencoach. Erfahre mehr über meinen Weg und meinen Beratungsansatz."
-image: "/images/laura-druehe_quadrat.jpg"
+title: "Über mich: Laura Drühe – zertifizierte LilaLiebe®-Beraterin und Familiencoach"
+seo_title: "Laura Drühe – zertifizierte LilaLiebe®-Beraterin"
+seo_description: "Ich bin Laura Drühe – Journalistin, Mama zweier Kinder und zertifizierte LilaLiebe®-Beraterin. Ich begleite Eltern online, ohne Wertung und auf Augenhöhe."
+image: "/images/laura-druehe_quadrat.webp"
+answer_capsule: "Laura Drühe ist zertifizierte LilaLiebe®-Beraterin (BDVT, ZFU-anerkannt) und begleitet Eltern online auf Basis der Gewaltfreien Kommunikation und der LilaLiebe®-Methode von Kathy Weber. Als Journalistin, Mama zweier Kinder und ausgebildete Heilpraktikerin bringt sie Fachwissen und echte Alltagserfahrung zusammen."
 ---
 
-Als Mutter von zwei Kindern (4 und 7 Jahre) kenne ich die täglichen Herausforderungen und Grenzen des Familienalltags aus erster Hand. Genau deshalb weiß ich, dass theoretisches Wissen allein kaum weiterhilft.
+# Über mich: Laura Drühe – zertifizierte LilaLiebe®-Beraterin
 
-### Mein Weg zur GFK
+Ich bin Laura – Mama eines 7-jährigen Jonah Elias und einer 4-jährigen Ava Emilia, ausgebildete Journalistin, und seit 2025 zertifizierte LilaLiebe®-Beraterin nach Kathy Weber.
 
-Vor fünf Jahren stieß ich an meine eigenen Grenzen. Ich wollte eine liebevolle Mutter sein, merkte aber, wie oft ich laut wurde oder drohte – Verhaltensweisen, die ich eigentlich ablehnte. 
+Ich lebe mit meiner Familie in Hamburg. Und ich weiß aus eigener Erfahrung: Elternsein ist das Schönste und gleichzeitig das Herausforderndste, was ich je gemacht habe.
 
-Die Entdeckung der Gewaltfreien Kommunikation (GFK) nach Marshall B. Rosenberg war für mich ein Wendepunkt. Aber erst die Verknüpfung mit der **LilaLiebe® Methode von Kathy Weber** machte die GFK für mich im stressigen Alltag mit kleinen Kindern wirklich greifbar.
+---
 
-### Warum ich tue, was ich tue
+## Wie ich zur LilaLiebe®-Beraterin wurde
 
-Ich bin davon überzeugt, dass Eltern keine "Spezialisten" sind, die ihr Kind reparieren müssen. Wir sind Menschen, die in Verbindung bleiben wollen.
+Ich habe viele Jahre als Redakteurin für Frauen- und Wohnmagazine gearbeitet – unter anderem für BRIGITTE und Living at Home. Ich bin jemand, der genau hinschaut, Zusammenhänge versteht und Dinge auf den Punkt bringt.
 
-Als **zertifizierte LilaLiebe®-Beraterin (BDVT, ZFU-anerkannt)** arbeite ich:
-- **Professionell:** Staatlich anerkannte Ausbildung und laufende Weiterbildung.
-- **Ohne Wertung:** Ich kenne den Stress. Es gibt kein "zu klein" oder "zu dumm".
-- **Alltagstauglich:** Bei mir gibt es keine komplizierte Theorie, sondern Sätze, die funktionieren.
+Aber wenn meine Kinder in der Autonomiephase waren, hat mich all das nicht weitergebracht.
+
+Ich kannte die Theorie. Ich wusste, dass hinter Wutausbrüchen Bedürfnisse stecken. Und trotzdem stand ich manchmal da und wusste nicht, wie ich in diesem Moment ruhig bleiben sollte – geschweige denn, was mein Kind gerade wirklich brauchte.
+
+Die LilaLiebe®-Methode von Kathy Weber hat mir den fehlenden Baustein gegeben. Nicht noch mehr Theorie – sondern ein echtes Verstehen. Und konkrete Werkzeuge, die im Alltag funktionieren. Auch wenn man selbst gerade am Limit ist.
+
+2025 habe ich die Ausbildung zur zertifizierten LilaLiebe®-Beraterin direkt bei Kathy Weber abgeschlossen – BDVT-zertifiziert, staatlich anerkannt durch die ZFU.
+
+Seitdem begleite ich andere Eltern genau so, wie ich mir das selbst gewünscht hätte: ohne erhobenen Zeigefinger, ohne Schuldgefühle, auf Augenhöhe.
+
+---
+
+## Was ich mitbringe
+
+Neben meiner Ausbildung zur LilaLiebe®-Beraterin absolviere ich eine Ausbildung zur Heilpraktikerin mit Spezialisierung auf Ernährungsberatung. Beides zusammen – das tiefe Verständnis für den Menschen als Ganzes und die GFK-basierte Begleitungsmethode – fließt in meine Arbeit ein.
+
+Als Journalistin habe ich gelernt, komplexe Dinge klar und verständlich zu machen. Das kommt meinen Klientinnen und Klienten zugute: Ich erkläre nicht akademisch, sondern so, dass es im Alltag ankommt.
+
+Und als Mama zweier echter Kinder weiß ich: Theorie ist schön. Aber um 18 Uhr, wenn alle hungrig sind und gleichzeitig eskalieren, braucht man keine schönen Sätze. Man braucht etwas, das wirklich funktioniert.
+
+---
+
+## Wie ich arbeite
+
+Ich begleite Eltern ausschließlich online – per Zoom oder Sprachnachricht. Das bedeutet: kein Weg, kein Wartezimmer, keine Terminsuche über Wochen. Einfach ein ruhiges Plätzchen und die Bereitschaft, ehrlich hinzuschauen.
+
+Meine Arbeit basiert auf der **LilaLiebe®-Methode** und der **Gewaltfreien Kommunikation (GFK)** nach Marshall B. Rosenberg. Ich arbeite ohne Wertung, ohne Patentrezepte und ohne das Gefühl, dass irgendjemand hier etwas „falsch" macht.
+
+Du machst einen fantastischen Job. Und manchmal braucht man einfach jemanden, der von außen schaut – und sagt, was wirklich gerade los ist.
+
+---
+
+## Ein bisschen mehr über mich
+
+Wenn ich nicht gerade coache oder schreibe: lange Spaziergänge an der Nordsee, Minzeis mit Schokostücken, Sommernachmittage an der Elbe. Warmer Ingwer-Tee. Kalter Rosé. Spontan-Verabredungen mit Freunden.
+
+Und immer: das Gefühl, dass wir das alle zusammen hinbekommen.
+
+---
+
+## Bereit für den ersten Schritt?
+
+Das kostenfreie Erstgespräch dauert 15–20 Minuten. Kein Druck, keine Verpflichtung – nur ein ehrliches Kennenlernen.
+
+👉 [Jetzt kostenloses Erstgespräch buchen](/einzelcoaching/)
+
+Oder schau dir zuerst an, wie ich arbeite:
+
+👉 [Zur LilaLiebe®-Methode](/lilaliebe/)
