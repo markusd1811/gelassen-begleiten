@@ -14,19 +14,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Cache Node Modules
+        id: cache-node-modules
+        uses: actions/cache@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install Dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci
 
       - name: Build Astro Project
         run: npm run build
 
-      - name: High-Speed Delta Sync (SFTP)
+      - name: High-Speed Parallel Delta Sync (SFTP)
         run: |
-          sudo apt-get install -y lftp
-          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.SFTP_USER }},'${{ secrets.SFTP_PASSWORD }}' sftp://${{ secrets.SFTP_HOST }}; mirror -X .* -X .*/ -R ./dist/ /gelassenbegleiten/; quit"
+          sudo apt-get install -y lftp > /dev/null
+          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.SFTP_USER }},'${{ secrets.SFTP_PASSWORD }}' sftp://${{ secrets.SFTP_HOST }}; mirror -X .* -X .*/ -R --parallel=5 ./dist/ /gelassenbegleiten/; quit"
