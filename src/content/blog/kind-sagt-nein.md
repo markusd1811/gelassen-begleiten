@@ -7,7 +7,6 @@ answer_capsule: "Wenn ein Kind ständig Nein sagt, ist das kein Trotz und keine 
 date: 2026-03-04
 ---
 
-# Kind sagt ständig Nein: Was steckt dahinter – und wie bleibst du gelassen?
 
 Wenn ein Kind ständig Nein sagt, ist das kein Trotz und keine Bosheit – es ist ein Entwicklungsschritt. Das Kind entdeckt, dass es eine eigene Stimme hat. Mit der LilaLiebe®-Methode lernst du, dieses Nein zu respektieren, ohne die Kooperation zu verlieren.
 

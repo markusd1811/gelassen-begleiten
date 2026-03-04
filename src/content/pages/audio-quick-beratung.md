@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Die Audio-Quick-Beratung ist ein niedrigschwelliges Coaching-Format für Eltern, die schnelle, konkrete Unterstützung brauchen – ohne Warteliste und ohne langen Prozess. Du schickst mir eine Sprachnachricht mit deiner Situation. Ich antworte innerhalb von 48 Stunden mit gezielten Tipps, die direkt zu euch passen. Für 29 €."
 ---
 
-# Audio-Quick-Beratung: Konkrete Hilfe für deinen Familienalltag – in 48 Stunden
 
 Die Audio-Quick-Beratung ist ein niedrigschwelliges Coaching-Format für Eltern, die schnelle, konkrete Unterstützung brauchen – ohne Warteliste und ohne langen Prozess. Du schickst mir eine Sprachnachricht mit deiner Situation. Ich antworte innerhalb von 48 Stunden mit gezielten Tipps, die direkt zu euch passen. Für 29 €.
 

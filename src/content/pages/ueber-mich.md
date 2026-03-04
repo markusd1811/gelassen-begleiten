@@ -6,7 +6,6 @@ image: "/images/laura-druehe_quadrat.webp"
 answer_capsule: "Laura Drühe ist zertifizierte LilaLiebe®-Beraterin (BDVT, ZFU-anerkannt) und begleitet Eltern online auf Basis der Gewaltfreien Kommunikation und der LilaLiebe®-Methode von Kathy Weber. Als Journalistin, Mama zweier Kinder und ausgebildete Heilpraktikerin bringt sie Fachwissen und echte Alltagserfahrung zusammen."
 ---
 
-# Über mich: Laura Drühe – zertifizierte LilaLiebe®-Beraterin
 
 Ich bin Laura – Mama eines 7-jährigen Jonah Elias und einer 4-jährigen Ava Emilia, ausgebildete Journalistin, und seit 2025 zertifizierte LilaLiebe®-Beraterin nach Kathy Weber.
 

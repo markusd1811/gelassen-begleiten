@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Familiencoaching online bedeutet: professionelle Begleitung nach LilaLiebe® und GFK – ohne Anfahrt, ohne Wartezimmer, ohne wochenlange Wartezeit. Laura Drühe begleitet Eltern und Elternteams deutschlandweit per Zoom. Flexibel, vertraulich und direkt auf eure Situation zugeschnitten."
 ---
 
-# Familiencoaching online: Professionelle Begleitung – wo immer du bist
 
 Familiencoaching online bedeutet: professionelle Begleitung nach LilaLiebe® und GFK – ohne Anfahrt, ohne Wartezimmer, ohne wochenlange Wartezeit. Laura Drühe begleitet Eltern und Elternteams deutschlandweit per Zoom. Flexibel, vertraulich und direkt auf eure Situation zugeschnitten.
 

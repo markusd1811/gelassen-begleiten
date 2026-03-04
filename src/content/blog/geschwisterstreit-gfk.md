@@ -7,7 +7,6 @@ answer_capsule: "Geschwisterstreit ist kein Zeichen, dass deine Kinder sich nich
 date: 2026-03-04
 ---
 
-# Geschwisterstreit: Was wirklich dahintersteckt – und wie GFK euch weiterhilft
 
 Geschwisterstreit ist kein Zeichen, dass deine Kinder sich nicht mögen – er ist ein Zeichen, dass beide gerade ein Bedürfnis haben, das noch nicht gehört wurde. Mit der GFK-Perspektive der LilaLiebe®-Methode lernst du, Konflikte zu begleiten, ohne Schiedsrichter zu spielen oder immer die Schuldige zu finden.
 

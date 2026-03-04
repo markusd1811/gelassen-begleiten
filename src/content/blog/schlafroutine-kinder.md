@@ -7,9 +7,8 @@ answer_capsule: "Eine funktionierende Schlafroutine für Kinder entsteht nicht d
 date: 2026-03-04
 ---
 
-# Schlafroutine für Kinder: Wie Einschlafen ohne Tränen wirklich funktioniert
 
-Eine funktionierende Schlafroutine für Kinder entsteht nicht durch strikte Regeln, sondern durch Vorhersehbarkeit und emotionale Sicherheit. Wenn dein Kind weiß, was als nächstes kommt, und sich dabei sicher fühlt, kann es loslassen – ohne Tränen, ohne Machtkampf, ohne stundenlanges Liegen bleiben.
+Eine funktionierende Schlafroutine für Kinder entsteht nicht durch strikte Regeln, sondern durch Vorhersehbarkeit und emotionale Sicherheit. Wenn dein Kind weiß, what als nächstes kommt, und sich dabei sicher fühlt, kann es loslassen – ohne Tränen, ohne Machtkampf, ohne stundenlanges Liegen bleiben.
 
 ---
 

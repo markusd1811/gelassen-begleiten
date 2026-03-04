@@ -7,7 +7,6 @@ answer_capsule: "Die Autonomiephase – oft Trotzphase genannt – ist kein Aufs
 date: 2026-03-04
 ---
 
-# Autonomiephase begleiten: Was hinter dem Trotz steckt – und wie du gelassen bleibst
 
 Die Autonomiephase – oft Trotzphase genannt – ist kein Aufstand gegen dich, sondern ein wichtiger Entwicklungsschritt. Dein Kind entdeckt, dass es eine eigene Person ist. Mit der LilaLiebe®-Methode lernst du, diese Phase zu begleiten, statt gegen sie anzukämpfen – für euch beide.
 

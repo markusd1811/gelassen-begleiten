@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Das 1:1-Familiencoaching umfasst zwei Zoom-Termine à 60 Minuten auf Basis der LilaLiebe®-Methode und Gewaltfreien Kommunikation. Im ersten Termin lernst du, deine eigenen Gefühle und Bedürfnisse hinter dem Konflikt zu erkennen. Im zweiten schauen wir gemeinsam auf die Perspektive deines Kindes. Du gehst mit echtem Handwerkszeug raus – für 200 €."
 ---
 
-# 1:1-Familiencoaching: Zwei Termine, die wirklich etwas verändern
 
 Das 1:1-Familiencoaching umfasst zwei Zoom-Termine à 60 Minuten auf Basis der LilaLiebe®-Methode und Gewaltfreien Kommunikation. Im ersten Termin lernst du, deine eigenen Gefühle und Bedürfnisse hinter dem Konflikt zu erkennen. Im zweiten schauen wir gemeinsam auf die Perspektive deines Kindes. Du gehst mit echtem Handwerkszeug raus – für 200 €.
 

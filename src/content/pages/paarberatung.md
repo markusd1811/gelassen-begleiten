@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Die Paarberatung für Elternteams umfasst drei Zoom-Termine auf Basis der LilaLiebe®-Methode und GFK. Jede Person bekommt ihre eigene Selbsteinfühlung – dann schauen wir gemeinsam auf die Perspektive eures Kindes. So entsteht echtes gegenseitiges Verstehen, kein fauler Kompromiss – für 300 €."
 ---
 
-# Paarberatung für Eltern: Gemeinsam in dieselbe Richtung wachsen
 
 Die Paarberatung für Elternteams umfasst drei Zoom-Termine auf Basis der LilaLiebe®-Methode und GFK. Jede Person bekommt ihre eigene Selbsteinfühlung – dann schauen wir gemeinsam auf die Perspektive eures Kindes. So entsteht echtes gegenseitiges Verstehen, kein fauler Kompromiss – für 300 €.
 

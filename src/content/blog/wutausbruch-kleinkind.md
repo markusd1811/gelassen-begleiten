@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Wutausbrüche bei Kleinkindern entstehen fast immer durch unerfüllte Grundbedürfnisse – meist nach Kontrolle, Autonomie oder Sicherheit. Das Kind funktioniert nicht absichtlich nicht: Es zeigt durch sein Verhalten, was es braucht. Mit der LilaLiebe®-Methode lernst du, dieses Signal zu lesen und ruhig zu antworten."
 ---
 
-# Wutausbruch beim Kind: Was steckt wirklich dahinter – und wie reagierst du gelassen?
 
 Wutausbrüche bei Kleinkindern entstehen fast immer durch unerfüllte Grundbedürfnisse – meist nach Kontrolle, Autonomie oder Sicherheit. Das Kind funktioniert nicht absichtlich nicht: Es zeigt durch sein Verhalten, was es braucht. Mit der LilaLiebe®-Methode lernst du, dieses Signal zu lesen und ruhig zu antworten.
 

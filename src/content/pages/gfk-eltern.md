@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Gewaltfreie Kommunikation (GFK) nach Marshall B. Rosenberg ist ein Kommunikationsansatz, der Gefühle und Bedürfnisse in den Mittelpunkt stellt – statt Urteile und Forderungen. Für Eltern bedeutet das: weniger Machtkämpfe, mehr Verbindung. Nicht weil du dich anders verhältst, sondern weil du anders verstehst, was gerade passiert."
 ---
 
-# Gewaltfreie Kommunikation für Eltern: Was GFK wirklich bedeutet – und wie du sie lernst
 
 Gewaltfreie Kommunikation (GFK) nach Marshall B. Rosenberg ist ein Kommunikationsansatz, der Gefühle und Bedürfnisse in den Mittelpunkt stellt – statt Urteile und Forderungen. Für Eltern bedeutet das: weniger Machtkämpfe, mehr Verbindung. Nicht weil du dich anders verhältst, sondern weil du anders verstehst, was gerade passiert.
 

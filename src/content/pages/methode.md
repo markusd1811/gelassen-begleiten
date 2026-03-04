@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "Die LilaLiebe®-Methode ist ein BDVT-zertifiziertes Beratungskonzept von Kathy Weber, das auf der Gewaltfreien Kommunikation nach Marshall B. Rosenberg basiert. Statt Strafen und Belohnungen fragt sie: Was steckt hinter dem Verhalten? Vier konkrete Schritte helfen Eltern, Konflikte an der Wurzel zu lösen – nicht nur an der Oberfläche."
 ---
 
-# Die LilaLiebe®-Methode: Wie GFK im Familienalltag wirklich funktioniert
 
 Die LilaLiebe®-Methode ist ein BDVT-zertifiziertes Beratungskonzept von Kathy Weber, das auf der Gewaltfreien Kommunikation nach Marshall B. Rosenberg basiert. Statt Strafen und Belohnungen fragt sie: Was steckt hinter dem Verhalten? Vier konkrete Schritte helfen Eltern, Konflikte an der Wurzel zu lösen – nicht nur an der Oberfläche.
 

@@ -6,7 +6,6 @@ image: "/images/hero-family.jpg"
 answer_capsule: "LilaLiebe® ist ein BDVT-zertifiziertes Erziehungs- und Beratungskonzept von Kathy Weber, das auf der Gewaltfreien Kommunikation basiert. Es zeigt Eltern, welche Grundbedürfnisse hinter dem Verhalten ihrer Kinder stecken – und gibt konkrete Werkzeuge für mehr Gelassenheit im Alltag. Als zertifizierte LilaLiebe®-Beraterin begleite ich Eltern online in diesem Prozess."
 ---
 
-# Was ist LilaLiebe®? Das Erziehungskonzept von Kathy Weber – erklärt von einer zertifizierten Beraterin
 
 LilaLiebe® ist ein BDVT-zertifiziertes Erziehungs- und Beratungskonzept von Kathy Weber, das auf der Gewaltfreien Kommunikation basiert. Es zeigt Eltern, welche Grundbedürfnisse hinter dem Verhalten ihrer Kinder stecken – und gibt konkrete Werkzeuge für mehr Gelassenheit im Alltag. Als zertifizierte LilaLiebe®-Beraterin begleite ich dich online in diesem Prozess.
 
