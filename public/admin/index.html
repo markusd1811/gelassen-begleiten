@@ -9,8 +9,13 @@
 </head>
 
 <body>
+    <!-- Include the German locale to prevent race conditions when using locale: "de" -->
+    <script src="https://unpkg.com/decap-cms-locales@^3.0.0/dist/decap-cms-locales-de.js"></script>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
+    <script>
+        CMS.registerLocale('de', window.DecapCmsLocales.de);
+    </script>
 </body>
 
 </html>

@@ -9,9 +9,45 @@ local_backend: true
 media_folder: "public/images"
 public_folder: "/images"
 
-# locale: "de" # Disabled to prevent race condition bug per learnings
+locale: "de"
 
 collections:
+  - name: "pages"
+    label: "Seiten (Zentrale Inhalte)"
+    files:
+      - label: "Startseite"
+        name: "home"
+        file: "src/data/home.json"
+        fields:
+          - label: "Hero Bereich"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Badge", name: "badge", widget: "string"}
+              - {label: "Titel (Normal)", name: "title_main", widget: "string"}
+              - {label: "Titel (Hervorgehoben)", name: "title_highlight", widget: "string"}
+              - {label: "Untertitel", name: "subtitle", widget: "text"}
+              - {label: "Bild", name: "image", widget: "image"}
+          - label: "Problem Bereich"
+            name: "problem"
+            widget: "object"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Einleitungstext", name: "text", widget: "text"}
+          - label: "Methoden Bereich"
+            name: "methode"
+            widget: "object"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - {label: "Bild", name: "image", widget: "image"}
+          - label: "Über Mich"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Titel", name: "title", widget: "string"}
+              - {label: "Text", name: "text", widget: "markdown"}
+              - {label: "Bild", name: "image", widget: "image"}
   - name: "blog"
     label: "Blog-Artikel (Problem-Seiten)"
     folder: "src/content/blog"

@@ -1,5 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { marked } from 'marked';
+import homeData from '../data/home.json';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
@@ -62,10 +64,9 @@ const schema = {
     <!-- 1. HERO -->
     <header id="home" class="hero">
         <div class="hero-content">
-            <span class="badge">Familiencoaching nach GFK</span>
-            <h1 class="fade-in-up">Gelassen <span class="highlight">begleiten.</span></h1>
-            <p class="subtitle fade-in-up delay-1">Klares und professionelles Familiencoaching auf Basis der
-                Gewaltfreien Kommunikation.</p>
+            <span class="badge">{homeData.hero.badge}</span>
+            <h1 class="fade-in-up">{homeData.hero.title_main} <span class="highlight">{homeData.hero.title_highlight}</span></h1>
+            <p class="subtitle fade-in-up delay-1">{homeData.hero.subtitle}</p>
             <div class="cta-buttons fade-in-up delay-2">
                 <a href="#kontakt" class="btn-primary">Erstgespräch vereinbaren</a>
                 <a href="#problem" class="btn-secondary">Ist das für uns?</a>
@@ -79,7 +80,7 @@ const schema = {
         </div>
         <div class="header-image-wrapper fade-in">
             <div class="soft-shape"></div>
-            <img src="/images/hero-family.jpg" alt="Mutter und Kind lachen gemeinsam" class="header-image">
+            <img src={homeData.hero.image} alt="Hero Bild" class="header-image">
         </div>
     </header>
 
@@ -87,9 +88,9 @@ const schema = {
     <section id="problem" class="section-light">
         <div class="container">
             <div class="section-header text-center">
-                <h2>Kennst du diese Momente?</h2>
+                <h2>{homeData.problem.title}</h2>
                 <div class="separator"></div>
-                <p>Der Familienalltag kann wunderschön sein, aber oft bringt er uns an unsere absoluten Grenzen.</p>
+                <p>{homeData.problem.text}</p>
             </div>
             <div class="pain-points-grid">
                 <div class="pain-card">
@@ -123,13 +124,9 @@ const schema = {
         <div class="container">
             <div class="grid-2 align-center">
                 <div class="text-block">
-                    <h2>Mein Beratungsansatz</h2>
+                    <h2>{homeData.methode.title}</h2>
                     <div class="separator-left"></div>
-                    <p>Mit der <strong>LilaLiebe® Methode</strong> (basierend auf der Gewaltfreien Kommunikation nach
-                        Marshall B. Rosenberg) schauen wir hinter das sichtbare Verhalten.</p>
-                    <p>Kinder "funktionieren" nicht absichtlich nicht. Sie zeigen uns durch ihr Verhalten lediglich,
-                        welche ihrer Grundbedürfnisse gerade nicht erfüllt sind. Wenn wir lernen, dieses "Nein" als ein
-                        "Ja" zu sich selbst zu verstehen, verändert sich alles.</p>
+                    <div set:html={marked.parse(homeData.methode.text)} />
 
                     <ul class="benefits-list">
                         <li><strong>Orientierung in Autonomiephasen:</strong> Verstehe, was entwicklungspsychologisch in
@@ -142,7 +139,7 @@ const schema = {
                     <a href="#angebote" class="btn-primary" style="margin-top: 2rem;">Zu meinen Angeboten</a>
                 </div>
                 <div class="image-box">
-                    <img src="/images/methode-symbol.jpg" alt="LilaLiebe Methode Symbolbild"
+                    <img src={homeData.methode.image} alt="LilaLiebe Methode Symbolbild"
                         class="rounded-image shadow-md">
                 </div>
             </div>
@@ -178,20 +175,13 @@ const schema = {
     <section id="about" class="section-warm">
         <div class="container grid-2 align-center">
             <div class="image-box text-center">
-                <img src="/images/laura-druehe_quadrat.jpg" alt="Laura Portrait" class="about-image"
+                <img src={homeData.about.image} alt="Laura Portrait" class="about-image"
                     style="width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:var(--shadow-soft);">
             </div>
             <div class="text-block">
-                <h2>Ich bin Laura Drühe.</h2>
+                <h2>{homeData.about.title}</h2>
                 <div class="separator-left"></div>
-                <p>Als Mutter von zwei Kindern (4 und 7 Jahre) kenne ich die täglichen Herausforderungen und Grenzen des
-                    Familienalltags aus erster Hand. Genau deshalb weiß ich, dass theoretisches Wissen allein kaum
-                    weiterhilft.</p>
-                <p>Seit 5 Jahren beschäftige ich mich intensiv mit der Gewaltfreien Kommunikation (GFK) und den Ansätzen
-                    von Kathy Weber. Als <strong>Mama einer 4-jährigen Tochter und eines 7-jährigen Sohnes</strong> weiß
-                    ich, dass reine Theorie im echten Leben oft nicht hilft. Mein Ansatz ist 100% alltagstauglich.</p>
-                <p>Als Familiencoach (und zertifizierte LilaLiebe®-Beraterin) arbeite ich klar, professionell und ohne
-                    Wertung. Mein Fokus liegt auf praktischen Handlungsalternativen für einen gelasseneren Alltag.</p>
+                <div set:html={marked.parse(homeData.about.text)} />
             </div>
         </div>
     </section>
