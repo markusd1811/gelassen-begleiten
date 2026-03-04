@@ -94,7 +94,7 @@ Du kannst wählen zwischen:
 
 Alle Formate beginnen mit einem **kostenfreien Erstgespräch (15–20 Minuten)** – ohne Verpflichtung.
 
-👉 [Alle Angebote im Überblick](/angebote/einzelcoaching/)
+👉 [Alle Angebote im Überblick](/einzelcoaching/)
 
 ---
 
@@ -126,4 +126,4 @@ Du musst nicht wissen, wie alles geht. Du musst nur spüren, dass du dir Unterst
 
 Das kostenfreie Erstgespräch dauert 15–20 Minuten. Kein Verkaufsgespräch, kein Druck – nur ein ehrliches Kennenlernen.
 
-👉 [Jetzt kostenfreies Erstgespräch buchen](/angebote/einzelcoaching/)
+👉 [Jetzt kostenfreies Erstgespräch buchen](/einzelcoaching/)

@@ -98,8 +98,8 @@ Genau für diese Momente gibt es meine **Audio-Quick-Beratung**: Du schilderst m
 
 Kein langer Prozess. Keine Warteliste. Nur eine Antwort auf das, was heute brennt.
 
-👉 [Zur Audio-Quick-Beratung (29 €)](/angebote/audio-quick-beratung/)
+👉 [Zur Audio-Quick-Beratung (29 €)](/audio-quick-beratung/)
 
 Oder du buchst ein **kostenloses Erstgespräch**, wenn du spürst, dass du tiefer hinschauen möchtest.
 
-👉 [Kostenloses Erstgespräch buchen](/angebote/einzelcoaching/)
+👉 [Kostenloses Erstgespräch buchen](/einzelcoaching/)
