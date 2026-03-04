@@ -13,7 +13,7 @@ locale: "de"
 
 collections:
   - name: "main_structure"
-    label: "🏗️ Website Zentrale"
+    label: "🏗️ Website-Zentrale"
     files:
       - label: "🏠 Startseite"
         name: "home"
@@ -76,7 +76,7 @@ collections:
         fields: *page_fields
 
   - name: "coaching"
-    label: "💼 CoachingAngebote"
+    label: "💼 Coaching-Angebote"
     files:
       - label: "🎧 Audio-Quick-Beratung"
         name: "audio_quick"
