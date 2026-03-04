@@ -1,14 +1,17 @@
 ---
-// Footer component
+import settings from "../data/settings.json";
 ---
+
 <footer>
     <div class="container footer-content">
-        <div class="footer-logo">Laura Drühe | Gelassen begleiten</div>
+        <div class="footer-logo">{settings.footer_text}</div>
         <p>Familiencoaching nach Gewaltfreier Kommunikation</p>
         <div class="footer-links">
-            <a href="/impressum.html">Impressum</a>
-            <a href="/datenschutz.html">Datenschutz</a>
+            <a href="/impressum">Impressum</a>
+            <a href="/datenschutz">Datenschutz</a>
         </div>
-        <p class="copyright">&copy; 2026 Laura Drühe. Alle Rechte vorbehalten.</p>
+        <p class="copyright">
+            &copy; {new Date().getFullYear()} Laura Drühe. Alle Rechte vorbehalten.
+        </p>
     </div>
 </footer>

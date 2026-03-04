@@ -12,6 +12,17 @@ public_folder: "/images"
 locale: "de"
 
 collections:
+  - name: "settings"
+    label: "⚙️ Globale Einstellungen"
+    files:
+      - label: "Branding & Logo"
+        name: "branding"
+        file: "src/data/settings.json"
+        fields:
+          - {label: "Website Logo", name: "logo", widget: "image", hint: "Format: PNG oder WebP mit transparentem Hintergrund. Max. 100KB."}
+          - {label: "Standard Seitentitel", name: "site_name", widget: "string"}
+          - {label: "Footer Text", name: "footer_text", widget: "string"}
+
   - name: "main_structure"
     label: "🏗️ Website-Zentrale"
     files:

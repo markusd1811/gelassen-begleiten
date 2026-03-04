@@ -1,6 +1,8 @@
 ---
 const pathname = new URL(Astro.request.url).pathname;
 const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exists
+
+import settings from "../data/settings.json";
 ---
 
 <!-- Sticky CTA Banner for Conversion -->
@@ -12,7 +14,7 @@ const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exi
 <nav class="navbar">
     <div class="logo">
         <a href="/">
-            <img src="/images/logo_gb.png" alt="Logo Gelassen Begleiten" />
+            <img src={settings.logo} alt="Logo Gelassen Begleiten" />
             <div class="logo-divider"></div>
             <span class="logo-text">Laura Drühe</span>
         </a>
@@ -57,8 +59,8 @@ const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exi
             >
         </li>
         <li>
-            <a href="/#erstgespraech" class="btn-primary-small"
-                >Termin buchen</a>
+            <a href="/#erstgespraech" class="btn-primary-small">Termin buchen</a
+            >
         </li>
     </ul>
 </nav>
