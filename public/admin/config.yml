@@ -12,10 +12,10 @@ public_folder: "/images"
 locale: "de"
 
 collections:
-  - name: "static_pages"
-    label: "Website - Feste Inhalte"
+  - name: "content_hub"
+    label: "📢 Content Hub (Hauptseiten)"
     files:
-      - label: "Startseite"
+      - label: "🏠 Startseite"
         name: "home"
         file: "src/data/home.json"
         fields:
@@ -27,7 +27,7 @@ collections:
               - {label: "Titel (Normal)", name: "title_main", widget: "string"}
               - {label: "Titel (Hervorgehoben)", name: "title_highlight", widget: "string"}
               - {label: "Untertitel", name: "subtitle", widget: "text"}
-              - {label: "Bild", name: "image", widget: "image"}
+              - {label: "Bild", name: "image", widget: "image", hint: "Format: Querformat (z.B. 1920x1080px). Fokus mittig oder rechts halten. Max. 300KB."}
           - label: "Problem Bereich"
             name: "problem"
             widget: "object"
@@ -40,42 +40,17 @@ collections:
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Text", name: "text", widget: "markdown"}
-              - {label: "Bild", name: "image", widget: "image"}
-          - label: "Über Mich"
+              - {label: "Bild", name: "image", widget: "image", hint: "Format: 1200x800px oder ähnlich. Max. 250KB."}
+          - label: "Über Mich Kurzvorschau"
             name: "about"
             widget: "object"
             fields:
               - {label: "Titel", name: "title", widget: "string"}
               - {label: "Text", name: "text", widget: "markdown"}
-              - {label: "Bild", name: "image", widget: "image"}
-  - name: "blog"
-    label: "Blog-Artikel (Problem-Seiten)"
-    folder: "src/content/blog"
-    create: true
-    slug: "{{slug}}"
-    summary: '{{title}}'
-    fields:
-      - {label: "Titel (H1)", name: "title", widget: "string"}
-      - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
-      - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
-      - {label: "Answer Capsule (GEO)", name: "answer_capsule", widget: "text", required: false}
-      - {label: "Datum", name: "date", widget: "datetime", required: false}
-      - {label: "Vorschaubild", name: "image", widget: "image", required: false}
-      - {label: "Text", name: "body", widget: "markdown"}
-
-  - name: "faq"
-    label: "Häufige Fragen (FAQ)"
-    folder: "src/content/faq"
-    create: true
-    slug: "{{slug}}"
-    summary: '{{question}}'
-    fields:
-      - {label: "Frage", name: "question", widget: "string"}
-      - {label: "Antwort", name: "answer", widget: "text"}
-      - {label: "Kategorie", name: "category", widget: "select", options: ["Methode & Ansatz", "Ablauf & Formate", "Kosten & Buchung", "Für wen ist es geeignet"]}
+              - {label: "Bild", name: "image", widget: "image", hint: "Format: Quadratisch (z.B. 800x800px). Zeigt Laura. Max. 200KB."}
 
   - name: "pages"
-    label: "Eigene Unterseiten (Landingpages)"
+    label: "📄 Hauptnavigation & Beratung"
     folder: "src/content/pages"
     create: true
     slug: "{{slug}}"
@@ -84,5 +59,31 @@ collections:
       - {label: "Titel (H1)", name: "title", widget: "string"}
       - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
       - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
-      - {label: "Hauptbild", name: "image", widget: "image", required: false}
+      - {label: "Hauptbild", name: "image", widget: "image", required: false, hint: "Optimale Breite: 1200px. Max. 300KB."}
       - {label: "Inhalt", name: "body", widget: "markdown"}
+
+  - name: "blog"
+    label: "✍️ Impulse (Journal/Blog)"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{title}}'
+    fields:
+      - {label: "Titel (H1)", name: "title", widget: "string"}
+      - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
+      - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
+      - {label: "Answer Capsule (GEO)", name: "answer_capsule", widget: "text", required: false, hint: "Kurze, prägnante Antwort auf die Titelfrage (ca. 2-3 Sätze)."}
+      - {label: "Datum", name: "date", widget: "datetime", required: false}
+      - {label: "Vorschaubild", name: "image", widget: "image", required: false, hint: "Format: Querformat (1200x630px empfohlen). Max 250KB."}
+      - {label: "Text", name: "body", widget: "markdown"}
+
+  - name: "faq"
+    label: "❓ Fragen & Antworten (FAQ)"
+    folder: "src/content/faq"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{question}}'
+    fields:
+      - {label: "Frage", name: "question", widget: "string"}
+      - {label: "Antwort", name: "answer", widget: "text"}
+      - {label: "Kategorie", name: "category", widget: "select", options: ["Allgemein", "Methode & Ansatz", "Ablauf & Formate", "Kosten & Buchung", "Für wen ist es geeignet"]}
