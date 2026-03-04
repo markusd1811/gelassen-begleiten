@@ -1,5 +1,6 @@
 ---
-// Navbar component
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exists
 ---
 
 <!-- Sticky CTA Banner for Conversion -->
@@ -22,11 +23,35 @@
         <span></span>
     </button>
     <ul class="nav-links">
-        <li><a href="/lilaliebe">LilaLiebe®</a></li>
-        <li><a href="/familiencoaching-online">Coaching</a></li>
-        <li><a href="/ueber-mich">Über mich</a></li>
-        <li><a href="/blog">Impulse</a></li>
-        <li><a href="/faq">FAQ</a></li>
+        <li>
+            <a
+                href="/lilaliebe"
+                class={currentPath === "/lilaliebe" ? "active" : ""}
+                >LilaLiebe®</a>
+        </li>
+        <li>
+            <a
+                href="/familiencoaching-online"
+                class={currentPath === "/familiencoaching-online"
+                    ? "active"
+                    : ""}>Coaching</a>
+        </li>
+        <li>
+            <a
+                href="/ueber-mich"
+                class={currentPath === "/ueber-mich" ? "active" : ""}
+                >Über mich</a>
+        </li>
+        <li>
+            <a
+                href="/blog"
+                class={currentPath.startsWith("/blog") ? "active" : ""}
+                >Impulse</a>
+        </li>
+        <li>
+            <a href="/faq" class={currentPath === "/faq" ? "active" : ""}
+                >FAQ</a>
+        </li>
         <li><a href="/#kontakt" class="btn-primary-small">Termin buchen</a></li>
     </ul>
 </nav>
