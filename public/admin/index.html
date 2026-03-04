@@ -18,13 +18,24 @@
             margin: 0 auto 2rem;
         }
 
-        /* Top Header Branding */
-        #nc-root header [class^="nc-app-header-logo"] {
-            background: url('/images/logo_gb.png') no-repeat left center;
-            background-size: contain;
-            width: 150px;
-            height: 32px;
+        /* Top Header Logo Styling */
+        header [class*="AppHeaderLogo"],
+        header [class*="LogoContainer"],
+        header a[href="#/"] {
+            background: url('/images/logo_gb.png') no-repeat left center !important;
+            background-size: contain !important;
+            width: 140px !important;
+            height: 30px !important;
+            margin-right: 20px !important;
             color: transparent !important;
+            display: flex !important;
+            align-items: center;
+        }
+
+        /* Ensure the header content doesn't overlap */
+        header>div {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
