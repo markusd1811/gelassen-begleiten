@@ -1,0 +1,38 @@
+backend:
+  name: git-gateway
+  repo: markusd1811/gelassen-begleiten
+  branch: main
+  
+local_backend: true
+
+media_folder: "public/images"
+public_folder: "/images"
+
+# locale: "de" # Disabled to prevent race condition bug per learnings
+
+collections:
+  - name: "blog"
+    label: "Blog-Artikel (Problem-Seiten)"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{title}}'
+    fields:
+      - {label: "Titel (H1)", name: "title", widget: "string"}
+      - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
+      - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
+      - {label: "Answer Capsule (GEO)", name: "answer_capsule", widget: "text", required: false}
+      - {label: "Datum", name: "date", widget: "datetime", required: false}
+      - {label: "Vorschaubild", name: "image", widget: "image", required: false}
+      - {label: "Text", name: "body", widget: "markdown"}
+
+  - name: "faq"
+    label: "Häufige Fragen (FAQ)"
+    folder: "src/content/faq"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{question}}'
+    fields:
+      - {label: "Frage", name: "question", widget: "string"}
+      - {label: "Antwort", name: "answer", widget: "text"}
+      - {label: "Kategorie", name: "category", widget: "select", options: ["Methode & Ansatz", "Ablauf & Formate", "Kosten & Buchung", "Für wen ist es geeignet"]}

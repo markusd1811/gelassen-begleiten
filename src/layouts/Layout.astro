@@ -16,9 +16,21 @@ const { title, description = "Laura Drühe - Familiencoaching nach Gewaltfreier 
 		<title>{title}</title>
 		<link rel="stylesheet" href="/styles.css" />
 		<slot name="head" />
+		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
 	<body>
 		<slot />
 		<script is:inline src="/script.js"></script>
+		<script is:inline>
+			if (window.netlifyIdentity) {
+				window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+					document.location.href = "/admin/";
+					});
+				}
+				});
+			}
+		</script>
 	</body>
 </html>
