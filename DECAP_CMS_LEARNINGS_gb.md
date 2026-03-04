@@ -65,5 +65,16 @@ CMS.registerPreviewTemplate('services', createClass({ render: function() { ... }
 ```
 So können wir live im CMS das tatsächliche Look & Feel der Seite nachbauen (inkl. Badges, Rändern, Schriftfarben) und die Vorschau direkt aus den `entry`-Props des CMS füttern.
 
+### 5. Netlify Limits vs. Self-Hosted GitHub OAuth (Das "Laura-Setup")
+**Das Problem:** Bei der Nutzung von Netlify "Identity / Git Gateway" als Login-Türsteher (für Projekte, die auf externen Servern wie IONOS liegen) stößt Netlify in den Free-Tiers an seine Kapazitätsgrenzen (`{"error":"usage_exceeded"}`). Ist das Kontingent des Accounts erschöpft, blockiert das CMS komplett und Nutzer können sich nicht mehr einloggen.
+
+**Unsere Lösung (100% unabhängig):** Wir haben Netlify komplett aus der Architektur gestrichen und das CMS Backend auf `github` umgestellt. Weil Decap CMS bei externem Hosting zwingend einen OAuth-Proxy Server benötigt, um sicherheitstechnisch den GitHub Client Secret zu verstecken, haben wir diesen Proxy in nur zwei kleinen PHP Dateien direkt auf IONOS selbst gebaut:
+- `public/auth/index.php`: Leitet den Nutzer (Laura) von `/admin` elegant zu GitHubs Authentifizierungsseite weiter.
+- `public/callback/index.php`: Nimmt die Antwort von GitHub entgegen, tauscht den temporären Code im Hintergrund mit unserem verborgenen `Client Secret` in ein langlebiges Access Token um, und sendet dieses Token an das Decap Frontend Fenster zurück.
+
+**Vorteile dieses Setups:** Absolute Autarkie. Keine Netlify Account Einschränkungen. Der Redakteur klickt im CMS lediglich auf "Mit GitHub einloggen", bestätigt es, und ist sofort (ohne weitere Passwörter) eingeloggt. Es fallen nie Server-Kosten von Drittanbietern an.
+
+---
+
 ### Fazit
-Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Vorschau, lokalisierte UI) bietet.
+Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Live-Vorschau mit Injected-CSS, lokalisierte UI, und einen serverlosen One-Click GitHub-Login über PHP) bietet.
