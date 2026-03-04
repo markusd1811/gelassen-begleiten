@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+const blogEntries = await getCollection('blog');
+const sortedEntries = blogEntries.sort((a, b) => {
+  return new Date(b.data.date || 0).valueOf() - new Date(a.data.date || 0).valueOf();
+});
+---
+
+<Layout title="Impulse & Blog | Laura Drühe Familiencoaching" description="Wertvolle Impulse, Artikel und Tipps rund um den Familienalltag und die Gewaltfreie Kommunikation.">
+    <Navbar />
+
+    <header class="section-warm text-center" style="padding-top: 8rem; padding-bottom: 4rem;">
+        <div class="container">
+            <h1>Aktuelle Impulse</h1>
+            <p class="subtitle" style="max-width: 600px; margin: 1rem auto;">Lösungsansätze, Wissen und Gedanken für einen gelasseneren Familienalltag.</p>
+        </div>
+    </header>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="cards-grid fade-up-elements">
+                {sortedEntries.map((post) => (
+                    <a href={`/blog/${post.slug}`} class="service-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; transition: transform 0.3s ease;">
+                        {post.data.image && (
+                            <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 20px 20px 0 0; overflow: hidden; height: 180px;">
+                                <img src={post.data.image} alt={post.data.title} style="width: 100%; height: 100%; object-fit: cover;" />
+                            </div>
+                        )}
+                        <h3 style="font-size: 1.25rem;">{post.data.title}</h3>
+                        <p style="font-size: 0.95rem; margin-top: 1rem; flex-grow: 1;">{post.data.answer_capsule ? post.data.answer_capsule.substring(0, 120) + '...' : ''}</p>
+                        <span style="display: block; margin-top: 1.5rem; color: var(--clr-primary); font-weight: 600;">Weiterlesen →</span>
+                    </a>
+                ))}
+            </div>
+            {sortedEntries.length === 0 && (
+                <p class="text-center" style="margin-top: 2rem;">Noch keine Beiträge vorhanden.</p>
+            )}
+        </div>
+    </section>
+
+    <Footer />
+</Layout>

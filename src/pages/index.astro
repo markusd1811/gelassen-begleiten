@@ -236,7 +236,7 @@ const schema = {
     </section>
 
     <!-- 7. FAQ -->
-    <section class="section-warm">
+    <section id="faq" class="section-warm">
         <div class="container">
             <h2 class="text-center">Häufig gestellte Fragen</h2>
             <div class="separator"></div>
@@ -252,6 +252,9 @@ const schema = {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div class="text-center mt-4 pt-4">
+                <a href="/faq" class="btn-outline">Alle Fragen lesen</a>
             </div>
         </div>
     </section>
@@ -280,6 +283,10 @@ const schema = {
             {sortedEntries.length === 0 && (
                 <p class="text-center" style="margin-top: 2rem;">In Kürze findest du hier erste Beiträge.</p>
             )}
+            
+            <div class="text-center mt-4 pt-4">
+                <a href="/blog" class="btn-outline">Zu allen Beiträgen</a>
+            </div>
         </div>
     </section>
 
