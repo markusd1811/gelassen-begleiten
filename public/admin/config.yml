@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
-  site_domain: "gelassen.netlify.app"
+  name: github
   repo: markusd1811/gelassen-begleiten
   branch: main
+  base_url: https://gelassen-begleiten.de
   
 local_backend: true
 
