@@ -1,51 +1,15 @@
-<!DOCTYPE html>
-<html lang="de">
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-    <title>Datenschutz | Laura Drühe</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .legal-content {
-            padding: 8rem 2rem 4rem;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+<Layout title="Datenschutz | Laura Drühe">
+    <slot name="head" slot="head">
+        <meta name="robots" content="noindex" />
+    </slot>
 
-        h1 {
-            margin-bottom: 2rem;
-            color: var(--clr-primary-dark);
-        }
-
-        h2 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-
-        h3 {
-            margin-top: 1.5rem;
-            font-size: 1.2rem;
-        }
-    </style>
-</head>
-
-<body>
-    <nav class="navbar scrolled">
-        <div class="logo">
-            <a href="index.html">
-                <img src="images/logo_gb.png" alt="Logo Gelassen Begleiten">
-                <div class="logo-divider"></div>
-                <span class="logo-text">Laura Drühe</span>
-            </a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Zurück zur Startseite</a></li>
-        </ul>
-    </nav>
+    <Navbar />
 
     <main class="legal-content">
         <h1>Datenschutzerklärung</h1>
@@ -77,11 +41,30 @@
                 die vollständige, rechtssichere Fassung.</i></p>
     </main>
 
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2026 Laura Drühe. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
-</body>
+    <Footer />
+</Layout>
 
-</html>
+<style>
+    .legal-content {
+        padding: 8rem 2rem 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+
+    h1 {
+        margin-bottom: 2rem;
+        color: var(--clr-primary-dark);
+    }
+
+    h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+    }
+
+    h3 {
+        margin-top: 1.5rem;
+        font-size: 1.2rem;
+    }
+</style>

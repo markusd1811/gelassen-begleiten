@@ -1,47 +1,13 @@
-<!DOCTYPE html>
-<html lang="de">
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Laura Drühe - Familiencoaching nach Gewaltfreier Kommunikation. Gelassen begleiten.">
+<Layout title="Laura Drühe | Familiencoaching nach GFK">
+    <Navbar />
 
-    <title>Laura Drühe | Familiencoaching nach GFK</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts werden lokal über CSS eingebunden -->
-</head>
-
-<body>
-    <!-- Sticky CTA Banner for Conversion -->
-    <div class="top-banner">
-        <span>Erster Schritt: Sichere dir dein kostenfreies Erstgespräch.</span>
-        <a href="#kontakt">Termin finden →</a>
-    </div>
-
-    <nav class="navbar">
-        <div class="logo">
-            <a href="#home">
-                <img src="images/logo_gb.png" alt="Logo Gelassen Begleiten">
-                <div class="logo-divider"></div>
-                <span class="logo-text">Laura Drühe</span>
-            </a>
-        </div>
-        <button class="mobile-menu-btn" aria-label="Menü öffnen">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="#problem">Kennst du das?</a></li>
-            <li><a href="#methode">Methode</a></li>
-            <li><a href="#about">Über mich</a></li>
-            <li><a href="#angebote">Angebote</a></li>
-            <li><a href="#kontakt" class="btn-primary-small">Termin buchen</a></li>
-        </ul>
-    </nav>
-
-    <!-- 1. HERO - klares Versprechen, emotionaler Einstieg -->
+    <!-- 1. HERO -->
     <header id="home" class="hero">
         <div class="hero-content">
             <span class="badge">Familiencoaching nach GFK</span>
@@ -61,11 +27,11 @@
         </div>
         <div class="header-image-wrapper fade-in">
             <div class="soft-shape"></div>
-            <img src="images/hero-family.jpg" alt="Mutter und Kind lachen gemeinsam" class="header-image">
+            <img src="/images/hero-family.jpg" alt="Mutter und Kind lachen gemeinsam" class="header-image">
         </div>
     </header>
 
-    <!-- 2. PROBLEM-AWARENESS - Holt die Eltern da ab, wo es weh tut -->
+    <!-- 2. PROBLEM-AWARENESS -->
     <section id="problem" class="section-light">
         <div class="container">
             <div class="section-header text-center">
@@ -100,7 +66,7 @@
         </div>
     </section>
 
-    <!-- 3. SOLUTION / METHODE - Die Lösung präsentieren -->
+    <!-- 3. SOLUTION / METHODE -->
     <section id="methode" class="section-warm">
         <div class="container">
             <div class="grid-2 align-center">
@@ -124,14 +90,14 @@
                     <a href="#angebote" class="btn-primary" style="margin-top: 2rem;">Zu meinen Angeboten</a>
                 </div>
                 <div class="image-box">
-                    <img src="images/methode-symbol.jpg" alt="LilaLiebe Methode Symbolbild"
+                    <img src="/images/methode-symbol.jpg" alt="LilaLiebe Methode Symbolbild"
                         class="rounded-image shadow-md">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SOCIAL PROOF / TESTIMONIALS - Kundenstimmen schaffen Vertrauen -->
+    <!-- 4. SOCIAL PROOF / TESTIMONIALS -->
     <section class="section-light">
         <div class="container text-center">
             <h2>Was andere Eltern sagen</h2>
@@ -156,11 +122,11 @@
         </div>
     </section>
 
-    <!-- 5. AUTHORITY / ABOUT - Warum Laura die Richtige ist -->
+    <!-- 5. AUTHORITY / ABOUT -->
     <section id="about" class="section-warm">
         <div class="container grid-2 align-center">
             <div class="image-box text-center">
-                <img src="images/laura-druehe_quadrat.jpg" alt="Laura Portrait" class="about-image"
+                <img src="/images/laura-druehe_quadrat.jpg" alt="Laura Portrait" class="about-image"
                     style="width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:var(--shadow-soft);">
             </div>
             <div class="text-block">
@@ -178,7 +144,7 @@
         </div>
     </section>
 
-    <!-- 6. ANGEBOTE - Klare Preise, klare Call-to-Actions -->
+    <!-- 6. ANGEBOTE -->
     <section id="angebote" class="section-light">
         <div class="container text-center">
             <h2>Wähle eure Begleitung</h2>
@@ -227,7 +193,7 @@
         </div>
     </section>
 
-    <!-- 7. FAQ - Einwände vorab behandeln erhöht Konversion -->
+    <!-- 7. FAQ -->
     <section class="section-warm">
         <div class="container">
             <h2 class="text-center">Häufig gestellte Fragen</h2>
@@ -267,7 +233,7 @@
         </div>
     </section>
 
-    <!-- 8. FINAL CTA / CONVERSION POINT -->
+    <!-- 8. FINAL CTA -->
     <section id="kontakt" class="section-light">
         <div class="container">
             <div class="contact-wrapper">
@@ -299,7 +265,7 @@
                     <!-- Calendly inline widget end -->
                     <p style="font-size: 0.75rem; color: #999; padding: 1rem; line-height: 1.3;">
                         Hinweis: Mit der Nutzung des Kalenders erklärst du dich mit der Übermittlung deiner Daten an
-                        Calendly und deren Verarbeitung gemäß unserer <a href="datenschutz.html"
+                        Calendly und deren Verarbeitung gemäß unserer <a href="/datenschutz.html"
                             style="color: inherit; text-decoration: underline;">Datenschutzerklärung</a> einverstanden.
                     </p>
                 </div>
@@ -307,19 +273,5 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container footer-content">
-            <div class="footer-logo">Laura Drühe | Gelassen begleiten</div>
-            <p>Familiencoaching nach Gewaltfreier Kommunikation</p>
-            <div class="footer-links">
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
-            <p class="copyright">&copy; 2026 Laura Drühe. Alle Rechte vorbehalten.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-
-</html>
+    <Footer />
+</Layout>
