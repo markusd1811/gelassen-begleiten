@@ -26,11 +26,7 @@ jobs:
       - name: Build Astro Project
         run: npm run build
 
-      - name: Sync Dateien via FTP (Delta-Deploy)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.SFTP_HOST }}
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ./dist/
-          server-dir: /gelassenbegleiten/
+      - name: High-Speed Delta Sync (SFTP)
+        run: |
+          sudo apt-get install -y lftp
+          lftp -c "set sftp:auto-confirm yes; open -u ${{ secrets.SFTP_USER }},'${{ secrets.SFTP_PASSWORD }}' sftp://${{ secrets.SFTP_HOST }}; mirror -X .* -X .*/ -R ./dist/ /gelassenbegleiten/; quit"
