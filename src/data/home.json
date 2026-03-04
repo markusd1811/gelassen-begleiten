@@ -1,23 +1,23 @@
 {
-    "hero": {
-        "badge": "Familiencoaching nach GFK",
-        "title_main": "Gelassen",
-        "title_highlight": "begleiten.",
-        "subtitle": "Klares und professionelles Familiencoaching auf Basis der Gewaltfreien Kommunikation.",
-        "image": "/images/hero-family.jpg"
-    },
-    "problem": {
-        "title": "Kennst du diese Momente?",
-        "text": "Der Familienalltag kann wunderschön sein, aber oft bringt er uns an unsere absoluten Grenzen."
-    },
-    "methode": {
-        "title": "Mein Beratungsansatz",
-        "text": "Mit der **LilaLiebe® Methode** (basierend auf der Gewaltfreien Kommunikation nach Marshall B. Rosenberg) schauen wir hinter das sichtbare Verhalten.\n\nKinder \"funktionieren\" nicht absichtlich nicht. Sie zeigen uns durch ihr Verhalten lediglich, welche ihrer Grundbedürfnisse gerade nicht erfüllt sind. Wenn wir lernen, dieses \"Nein\" als ein \"Ja\" zu sich selbst zu verstehen, verändert sich alles.",
-        "image": "/images/methode-symbol.jpg"
-    },
-    "about": {
-        "title": "Ich bin Laura Drühe.",
-        "text": "Als Mutter von zwei Kindern (4 und 7 Jahre) kenne ich die täglichen Herausforderungen und Grenzen des Familienalltags aus erster Hand. Genau deshalb weiß ich, dass theoretisches Wissen allein kaum weiterhilft.\n\nSeit 5 Jahren beschäftige ich mich intensiv mit der Gewaltfreien Kommunikation (GFK) und den Ansätzen von Kathy Weber. Als **Mama einer 4-jährigen Tochter und eines 7-jährigen Sohnes** weiß ich, dass reine Theorie im echten Leben oft nicht hilft. Mein Ansatz ist 100% alltagstauglich.\n\nAls Familiencoach (und zertifizierte LilaLiebe®-Beraterin) arbeite ich klar, professionell und ohne Wertung. Mein Fokus liegt auf praktischen Handlungsalternativen für einen gelasseneren Alltag.",
-        "image": "/images/laura-druehe_quadrat.jpg"
-    }
+  "hero": {
+    "badge": "Familiencoaching nach GFK",
+    "title_main": "Gelassen",
+    "title_highlight": "begleiten.",
+    "subtitle": "Klares und professionelles Familiencoaching auf Basis der Gewaltfreien Kommunikation. Mit Laura",
+    "image": "/images/hero-family.jpg"
+  },
+  "problem": {
+    "title": "Kennst du diese Momente?",
+    "text": "Der Familienalltag kann wunderschön sein, aber oft bringt er uns an unsere absoluten Grenzen."
+  },
+  "methode": {
+    "title": "Mein Beratungsansatz",
+    "text": "Mit der **LilaLiebe® Methode** (basierend auf der Gewaltfreien Kommunikation nach Marshall B. Rosenberg) schauen wir hinter das sichtbare Verhalten.\n\nKinder \"funktionieren\" nicht absichtlich nicht. Sie zeigen uns durch ihr Verhalten lediglich, welche ihrer Grundbedürfnisse gerade nicht erfüllt sind. Wenn wir lernen, dieses \"Nein\" als ein \"Ja\" zu sich selbst zu verstehen, verändert sich alles.",
+    "image": "/images/methode-symbol.jpg"
+  },
+  "about": {
+    "title": "Ich bin Laura Drühe.",
+    "text": "Als Mutter von zwei Kindern (4 und 7 Jahre) kenne ich die täglichen Herausforderungen und Grenzen des Familienalltags aus erster Hand. Genau deshalb weiß ich, dass theoretisches Wissen allein kaum weiterhilft.\n\nSeit 5 Jahren beschäftige ich mich intensiv mit der Gewaltfreien Kommunikation (GFK) und den Ansätzen von Kathy Weber. Als **Mama einer 4-jährigen Tochter und eines 7-jährigen Sohnes** weiß ich, dass reine Theorie im echten Leben oft nicht hilft. Mein Ansatz ist 100% alltagstauglich.\n\nAls Familiencoach (und zertifizierte LilaLiebe®-Beraterin) arbeite ich klar, professionell und ohne Wertung. Mein Fokus liegt auf praktischen Handlungsalternativen für einen gelasseneren Alltag.",
+    "image": "/images/laura-druehe_quadrat.jpg"
+  }
 }
