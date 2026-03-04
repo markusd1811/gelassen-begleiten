@@ -12,8 +12,8 @@ public_folder: "/images"
 locale: "de"
 
 collections:
-  - name: "pages"
-    label: "Seiten (Zentrale Inhalte)"
+  - name: "static_pages"
+    label: "Website - Feste Inhalte"
     files:
       - label: "Startseite"
         name: "home"
@@ -73,3 +73,16 @@ collections:
       - {label: "Frage", name: "question", widget: "string"}
       - {label: "Antwort", name: "answer", widget: "text"}
       - {label: "Kategorie", name: "category", widget: "select", options: ["Methode & Ansatz", "Ablauf & Formate", "Kosten & Buchung", "Für wen ist es geeignet"]}
+
+  - name: "pages"
+    label: "Eigene Unterseiten (Landingpages)"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    summary: '{{title}}'
+    fields:
+      - {label: "Titel (H1)", name: "title", widget: "string"}
+      - {label: "SEO Title Tag", name: "seo_title", widget: "string", required: false}
+      - {label: "SEO Meta Description", name: "seo_description", widget: "text", required: false}
+      - {label: "Hauptbild", name: "image", widget: "image", required: false}
+      - {label: "Inhalt", name: "body", widget: "markdown"}

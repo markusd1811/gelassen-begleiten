@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const pagesEntries = await getCollection('pages');
+  return pagesEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Layout 
+  title={`${entry.data.seo_title || entry.data.title} | Laura Drühe`}
+  description={entry.data.seo_description}
+>
+    <Navbar />
+
+    <header class="section-warm text-center" style="padding-top: 8rem; padding-bottom: 4rem;">
+        <div class="container">
+            <h1>{entry.data.title}</h1>
+        </div>
+    </header>
+
+    <article class="section-light">
+        <div class="container">
+            {entry.data.image && (
+                <img src={entry.data.image} alt={entry.data.title} style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 24px; margin-bottom: 3rem;" />
+            )}
+            <div class="content-body" style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: var(--clr-text-secondary);">
+                <Content />
+            </div>
+
+            <div class="text-center mt-4 pt-4">
+                <a href="/#kontakt" class="btn-primary">Jetzt Beratung anfragen</a>
+            </div>
+        </div>
+    </article>
+
+    <Footer />
+</Layout>

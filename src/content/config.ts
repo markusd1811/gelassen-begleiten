@@ -21,7 +21,18 @@ const faqCollection = defineCollection({
   }),
 });
 
+const pagesCollection = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    seo_title: z.string().optional(),
+    seo_description: z.string().optional(),
+    image: z.string().optional(),
+  }),
+});
+
 export const collections = {
   'blog': blogCollection,
   'faq': faqCollection,
+  'pages': pagesCollection,
 };
