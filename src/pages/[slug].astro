@@ -13,12 +13,54 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+// Schema.org Logic
+const isService = ['audio-quick-beratung', 'einzelcoaching', 'paarberatung'].includes(entry.slug);
+let pageSchema = null;
+
+if (isService) {
+    const prices = {
+        'audio-quick-beratung': '29',
+        'einzelcoaching': '200',
+        'paarberatung': '300'
+    };
+    pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": entry.data.title,
+        "description": entry.data.seo_description,
+        "provider": {
+            "@type": "Person",
+            "name": "Laura Drühe",
+            "url": "https://gelassen-begleiten.de"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": prices[entry.slug],
+            "priceCurrency": "EUR"
+        }
+    };
+} else if (entry.slug === 'ueber-mich') {
+    pageSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Laura Drühe",
+        "url": "https://gelassen-begleiten.de",
+        "jobTitle": "Zertifizierte LilaLiebe®-Beraterin und Familiencoach",
+        "description": entry.data.seo_description,
+        "image": "https://gelassen-begleiten.de/images/laura-druehe_quadrat.jpg",
+        "knowsAbout": ["Gewaltfreie Kommunikation", "LilaLiebe® Methode", "Familiencoaching"]
+    };
+}
 ---
 
 <Layout 
   title={`${entry.data.seo_title || entry.data.title} | Laura Drühe`}
   description={entry.data.seo_description}
 >
+    <slot name="head" slot="head">
+        {pageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />}
+    </slot>
     <Navbar />
 
     <header class="section-warm text-center" style="padding-top: 8rem; padding-bottom: 4rem;">
