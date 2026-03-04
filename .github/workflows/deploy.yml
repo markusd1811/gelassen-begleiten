@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           # Der Ordner, den Astro nach dem Build erstellt:
           local_path: './dist/*'
-          # WICHTIG: Passe den remote_path an deinen Zielordner auf dem Strato/IONOS Webspace an
+          # WICHTIG: Passe den remote_path an deinen Zielordner auf dem IONOS Webspace an
           # Häufig ist das einfach '/' oder '/htdocs' oder '/DeinProjektOrdner'
           remote_path: '/gelassenbegleiten'
           sftp_only: true
