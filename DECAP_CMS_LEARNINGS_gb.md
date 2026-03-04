@@ -16,6 +16,24 @@ Es agiert als **Git-basiertes CMS**. Das bedeutet:
 
 ---
 
+## 🏗️ Architektur: Warum Astro + Decap CMS?
+
+Das Setup nutzt ein "Auto-Metapher"-Prinzip, um maximale Performance mit einfacher Bedienung zu vereinen:
+
+### Astro (Der Motor & das Fahrwerk)
+Astro ist das technische Herzstück. Es "baut" die Website.
+- **Performance:** Es verwandelt die CMS-Daten in reines, pfeilschnelles HTML. Besucher laden keinen unnötigen Code, was zu 100/100 PageSpeed-Werten führt.
+- **SEO-Automatisierung:** Astro generiert im Hintergrund Sitemaps, optimiert Bilder (WebP) und setzt Meta-Tags sowie JSON-LD Schemas (SEO) automatisch.
+
+### Decap CMS (Das Cockpit)
+Das CMS ist die Fernsteuerung für Laura.
+- **Editierbarkeit:** Ohne Code-Wissen kann Laura Artikel schreiben, Bilder hochladen und die Startseite anpassen.
+- **Unabhängigkeit:** Das CMS speichert direkt in GitHub. Es gibt keine externe Cloud und keine monatlichen Mietkosten für das CMS-System.
+
+**Synergie:** Zusammen ermöglichen sie den "Jamstack"-Vorteil: Eine Website, die so sicher und schnell ist wie eine statische Seite, aber so einfach zu pflegen wie WordPress.
+
+---
+
 ## 🚀 Implementierungs-Anweisungen (Frontend)
 
 Die Einrichtung gliedert sich bei uns in drei wesentliche Bereiche:
