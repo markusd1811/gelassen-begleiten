@@ -18,31 +18,30 @@
             margin: 0 auto 2rem;
         }
 
-        /* Top Header Logo Styling - Refined to prevent overlap */
-        header a[href="#/"],
-        header [class*="AppHeaderLogo"],
-        header [class*="LogoContainer"] {
+        /* Top Header Logo Styling - Absolute positioning to force space */
+        #nc-root header>div {
+            padding-left: 200px !important;
+            /* Create guaranteed space for the logo */
+            position: relative !important;
+        }
+
+        #nc-root header a[href="#/"] {
+            position: absolute !important;
+            left: 20px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            display: block !important;
+            width: 160px !important;
+            height: 30px !important;
             background: url('/images/logo_gb.png') no-repeat left center !important;
             background-size: contain !important;
-            width: 180px !important;
-            /* Increased width to accommodate logo + spacer */
-            height: 34px !important;
-            margin-right: 40px !important;
-            /* More space to the first menu item */
             color: transparent !important;
-            display: inline-block !important;
-            position: relative !important;
-            flex-shrink: 0 !important;
+            z-index: 100;
         }
 
-        /* Ensure nav items are pushed to the right */
-        header nav {
-            margin-left: 20px !important;
-        }
-
-        /* Clean up the header appearance */
-        header {
-            padding: 0 20px !important;
+        /* Hide the original text if it still peeks through */
+        #nc-root header a[href="#/"] * {
+            display: none !important;
         }
     </style>
 </head>
