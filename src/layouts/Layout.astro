@@ -30,6 +30,9 @@ const { title, description = "Laura Drühe - Familiencoaching nach Gewaltfreier 
 					});
 				}
 				});
+				window.netlifyIdentity.init({
+					APIUrl: "https://gelassen.netlify.app/.netlify/identity"
+				});
 			}
 		</script>
 	</body>
