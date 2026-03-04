@@ -5,7 +5,28 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <title>Content Manager</title>
+    <title>Gelassen Begleiten | Content Management</title>
+    <style>
+        /* Login Page Branding */
+        #nc-root [class^="nc-login-container"]::before {
+            content: "";
+            display: block;
+            width: 180px;
+            height: 80px;
+            background: url('/images/logo_gb.png') no-repeat center;
+            background-size: contain;
+            margin: 0 auto 2rem;
+        }
+
+        /* Top Header Branding */
+        #nc-root header [class^="nc-app-header-logo"] {
+            background: url('/images/logo_gb.png') no-repeat left center;
+            background-size: contain;
+            width: 150px;
+            height: 32px;
+            color: transparent !important;
+        }
+    </style>
 </head>
 
 <body>
