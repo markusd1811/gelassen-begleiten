@@ -111,5 +111,22 @@ Um das CMS für den Endnutzer (Laura) vertrauenswürdig und professionell zu ges
 
 ---
 
+### 8. Intuitive CMS-Struktur & User Experience (UX)
+Um das CMS für Laura so intuitiv wie die Website selbst zu gestalten, haben wir von der standardmäßigen "Ordner-Ansicht" auf eine **individuelle File-Struktur** umgestellt:
+- **Herausforderung:** In einer reinen Ordner-Collection (`folder`) sieht man links im Menü oft nur eine unsortierte Liste an Markdown-Dateien. Das ist schwer zu navigieren, wenn man gezielt die "LilaLiebe-Seite" sucht.
+- **Lösung (File Collections):** Wir haben die Hauptseiten der Navigation (Startseite, Über mich, Methode etc.) als einzelne `files` in einer `Website-Zentrale` Gruppe definiert. Dadurch hat Laura links im Menü direkt die Namen der echten Website-Seiten vor Augen – anstatt nur kryptischer Dateinamen.
+- **Gruppierung:** Wir haben logische Einheiten gebildet:
+    - `🏗️ Website-Zentrale` für die Kernseiten der Navigation.
+    - `💼 Coaching-Angebot` für die vier Beratungsformate.
+    - `✍️ Impulse` für den Blog-Bereich (als Ordner-Collection für neue Inhalte).
+    - `⚙️ Globale Einstellungen` für Logo und Branding-Texte.
+
+### 9. Intelligente Bild-Hints
+Da beim Upload von Fotos oft Unsicherheit über die Maße herrscht, haben wir das `hint`-Feld in der `config.yml` intensiv genutzt:
+- **Kontextsensitive Hilfe:** Jedes Bild-Feld (Hero, Profilbild, Blog) zeigt direkt beim Upload genau die benötigten Maße (z.B. "Optimal: 1920x1080px") und das maximale Gewicht (z.B. "Max. 300KB") an.
+- **Performance-Schutz:** Dies erinnert den Redakteur (Laura) aktiv daran, keine 10MB-Originalfotos zu nutzen, was die Ladezeit der Seite langfristig schützt.
+
+---
+
 ### Fazit
-Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Live-Vorschau mit Injected-CSS, lokalisierte UI, Marken-Branding und einen High-Speed SFTP-Mirror über lftp) bietet.
+Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Live-Vorschau mit Injected-CSS, lokalisierte UI, Marken-Branding und einen High-Speed SFTP-Mirror über lftp) bietet. Durch die individuelle Strukturierung der Menüpunkte (Website-Zentrale) fühlt sich das CMS jetzt wie eine maßgeschneiderte Software für das spezifische Business an.
