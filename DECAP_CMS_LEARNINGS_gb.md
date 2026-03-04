@@ -76,5 +76,22 @@ So können wir live im CMS das tatsächliche Look & Feel der Seite nachbauen (in
 
 ---
 
+### 6. High-Speed Deployment via `lftp` (Delta-Sync)
+**Das Problem:** Standardmäßige SFTP-Deploy-Actions schieben oft den gesamten `dist`-Ordner bei jeder Änderung stur neu auf den Server. Bei IONOS (Port 22 erforderlich) führt dies bei wachsendem Content zu langen Wartezeiten (gelbe Balken in GitHub), was den CMS-Workflow ausbremst.
+
+**Unsere Lösung:** Einsatz von `lftp` mit dem `mirror -R` Befehl in der GitHub Action.
+- **Delta-Sync:** `lftp` vergleicht lokal und remote und überträgt *nur* die Dateien, die sich tatsächlich geändert haben.
+- **Parallelität:** Es kann mehrere Dateien gleichzeitig hochladen.
+- **Sicherheit:** Läuft stabil über SFTP (Port 22), was bei IONOS zwingend erforderlich ist (Timeouts auf Port 21 umgangen).
+*Ergebnis:* Die Deploy-Zeit nach einem CMS-Save wurde von Minuten auf wenige Sekunden reduziert.
+
+### 7. Custom Branding & White Labeling
+Um das CMS für den Endnutzer (Laura) vertrauenswürdig und professionell zu gestalten, haben wir CSS-Injections in der `admin/index.html` genutzt.
+- **Login-Screen:** Das Markenlogo wurde über dem Login-Button platziert.
+- **Dashboard:** Das Decap-Icon in der Navbar wurde durch das "Gelassen Begleiten" Logo ersetzt.
+- **Favicon & Title:** Volle Integration der Markenidentität im Browser-Tab.
+
+---
+
 ### Fazit
-Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Live-Vorschau mit Injected-CSS, lokalisierte UI, und einen serverlosen One-Click GitHub-Login über PHP) bietet.
+Mit Decap CMS haben wir eine schlanke, wartungsarme und völlig serverunabhängige Content-Struktur aufgebaut, die dennoch dem Endnutzer im Dashboard großen Komfort (Bild-Upload, Live-Vorschau mit Injected-CSS, lokalisierte UI, Marken-Branding und einen High-Speed SFTP-Mirror über lftp) bietet.
