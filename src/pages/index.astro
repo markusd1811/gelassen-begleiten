@@ -9,6 +9,20 @@ const sortedEntries = blogEntries.sort((a, b) => {
   return new Date(b.data.date || 0).valueOf() - new Date(a.data.date || 0).valueOf();
 }).slice(0, 3); // latest 3
 
+const faqEntries = await getCollection('faq');
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqEntries.map(entry => ({
+    "@type": "Question",
+    "name": entry.data.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": entry.data.answer
+    }
+  }))
+};
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -40,6 +54,7 @@ const schema = {
 <Layout title="Laura Drühe | Familiencoaching nach GFK">
     <slot name="head" slot="head">
         <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+        <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
     </slot>
 
     <Navbar />
@@ -236,36 +251,17 @@ const schema = {
             <h2 class="text-center">Häufig gestellte Fragen</h2>
             <div class="separator"></div>
             <div class="faq-accordion mt-4">
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <h4>Muss mein Partner / meine Partnerin dabei sein?</h4>
-                        <span class="faq-icon">+</span>
+                {faqEntries.map((faq) => (
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h4>{faq.data.question}</h4>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-content">
+                            <p>{faq.data.answer}</p>
+                        </div>
                     </div>
-                    <div class="faq-content">
-                        <p>Nein. Es reicht sogar oft schon, wenn ein Systemmitglied anfängt, die Perspektive zu
-                            wechseln, um die ganze Familiendynamik nachhaltig zum Positiven zu verändern.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <h4>Hilft das auch, wenn mein Kind schon älter ist?</h4>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-content">
-                        <p>Ja absolut! Bedürfnisse und Gefühle haben wir ein Leben lang. Die GFK und LilaLiebe® greifen
-                            unabhängig vom Alter, wir schauen nur gemeinsam auf die jeweilige Entwicklungsphase.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-header">
-                        <h4>Ich traue mich nicht recht. Ist mein Problem nicht zu profan?</h4>
-                        <span class="faq-icon">+</span>
-                    </div>
-                    <div class="faq-content">
-                        <p>Es gibt kein "zu klein" oder "zu dumm". Wenn etwas für DICH Stress im Alltag bedeutet, ist es
-                            absolut wert, genauer betrachtet zu werden. Ich werte nicht – ich höre zu.</p>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     </section>
