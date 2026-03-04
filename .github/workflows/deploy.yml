@@ -26,16 +26,11 @@ jobs:
       - name: Build Astro Project
         run: npm run build
 
-      - name: Deploy via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Sync Dateien via FTP (Delta-Deploy)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          # Der Ordner, den Astro nach dem Build erstellt:
-          local_path: './dist/*'
-          # WICHTIG: Passe den remote_path an deinen Zielordner auf dem IONOS Webspace an
-          # Häufig ist das einfach '/' oder '/htdocs' oder '/DeinProjektOrdner'
-          remote_path: '/gelassenbegleiten'
-          sftp_only: true
-          sftpArgs: '-o StrictHostKeyChecking=no'
+          local-dir: ./dist/
+          server-dir: /gelassenbegleiten/
