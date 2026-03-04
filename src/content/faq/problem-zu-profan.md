@@ -1,5 +1,5 @@
 ---
 question: "Ich traue mich nicht recht. Ist mein Problem nicht zu profan?"
-answer: "Es gibt kein \"zu klein\" oder \"zu dumm\". Wenn etwas für DICH Stress im Alltag bedeutet, ist es absolut wert, genauer betrachtet zu werden. Ich werte nicht – ich höre zu."
-category: "Für wen ist es geeignet"
+answer: "Nein. Es gibt kein Problem, das zu klein ist, wenn es dich beschäftigt. Viele Eltern kommen mit Situationen, die sich „eigentlich nicht so schlimm“ anfühlen – und gehen mit einer Klarheit raus, die ihren ganzen Alltag verändert."
+category: "Allgemein"
 ---

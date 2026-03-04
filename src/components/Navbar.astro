@@ -6,7 +6,7 @@ const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exi
 <!-- Sticky CTA Banner for Conversion -->
 <div class="top-banner">
     <span>Erster Schritt: Sichere dir dein kostenfreies Erstgespräch.</span>
-    <a href="#kontakt">Termin finden →</a>
+    <a href="#erstgespraech">Termin finden →</a>
 </div>
 
 <nav class="navbar">
@@ -27,31 +27,38 @@ const currentPath = pathname.replace(/\/$/, ""); // Remove trailing slash if exi
             <a
                 href="/lilaliebe"
                 class={currentPath === "/lilaliebe" ? "active" : ""}
-                >LilaLiebe®</a>
+                >LilaLiebe®</a
+            >
         </li>
         <li>
             <a
                 href="/familiencoaching-online"
                 class={currentPath === "/familiencoaching-online"
                     ? "active"
-                    : ""}>Coaching</a>
+                    : ""}>Coaching</a
+            >
         </li>
         <li>
             <a
                 href="/ueber-mich"
                 class={currentPath === "/ueber-mich" ? "active" : ""}
-                >Über mich</a>
+                >Über mich</a
+            >
         </li>
         <li>
             <a
                 href="/blog"
                 class={currentPath.startsWith("/blog") ? "active" : ""}
-                >Impulse</a>
+                >Impulse</a
+            >
         </li>
         <li>
-            <a href="/faq" class={currentPath === "/faq" ? "active" : ""}
-                >FAQ</a>
+            <a href="/faq" class={currentPath === "/faq" ? "active" : ""}>FAQ</a
+            >
         </li>
-        <li><a href="/#kontakt" class="btn-primary-small">Termin buchen</a></li>
+        <li>
+            <a href="/#erstgespraech" class="btn-primary-small"
+                >Termin buchen</a>
+        </li>
     </ul>
 </nav>

@@ -58,7 +58,10 @@ const schema = {
 };
 ---
 
-<Layout title="Laura Drühe | Familiencoaching nach GFK">
+<Layout
+    title="Familiencoaching GFK online | Gelassen begleiten"
+    description="Familiencoaching nach GFK und LilaLiebe® – online via Zoom, alltagstauglich und ohne Wertung. Zertifizierte LilaLiebe®-Beraterin Laura Drühe. Erstgespräch kostenlos."
+>
     <slot name="head" slot="head">
         <script type="application/ld+json" set:html={JSON.stringify(schema)}
         ></script>
@@ -78,16 +81,19 @@ const schema = {
             </h1>
             <p class="subtitle fade-in-up delay-1">{homeData.hero.subtitle}</p>
             <div class="cta-buttons fade-in-up delay-2">
-                <a href="#kontakt" class="btn-primary"
+                <a href="#erstgespraech" class="btn-primary"
                     >Erstgespräch vereinbaren</a
                 >
                 <a href="#problem" class="btn-secondary">Ist das für uns?</a>
             </div>
             <!-- Trust Elements under CTA -->
             <div class="trust-marks fade-in-up delay-2">
-                <span>✓ Gewaltfreie Kommunikation</span>
-                <span>✓ Online via Zoom</span>
-                <span>✓ Alltagstaugliche Lösungen</span>
+                <span
+                    >✓ Gewaltfreie Kommunikation nach Marshall B. Rosenberg</span
+                >
+                <span>✓ LilaLiebe®-Methode (BDVT-zertifiziert)</span>
+                <span>✓ Online via Zoom – deutschlandweit</span>
+                <span>✓ Alltagstaugliche Werkzeuge</span>
             </div>
         </div>
         <div class="header-image-wrapper fade-in">
@@ -111,29 +117,28 @@ const schema = {
             <div class="pain-points-grid">
                 <div class="pain-card">
                     <span class="pain-icon">💬</span>
-                    <h3>Kommunikationshürden</h3>
+                    <h3>Kleinigkeiten eskalieren</h3>
                     <p>
-                        Kleinigkeiten reichen oft aus, um Konflikte auszulösen.
-                        Es fällt schwer zu erkennen, was das Verhalten des
-                        Kindes eigentlich antreibt.
+                        Du weißt nicht, was dein Kind gerade wirklich antreibt –
+                        und reagierst lauter, als du eigentlich wolltest.
                     </p>
                 </div>
                 <div class="pain-card">
                     <span class="pain-icon">⚖️</span>
-                    <h3>Sich wiederholende Konflikte</h3>
+                    <h3>Dieselben Situationen</h3>
                     <p>
-                        Wiederkehrende Streitsituationen im Alltag rauben
-                        Energie – sei es beim Anziehen, Essen oder
-                        Schlafengehen.
+                        Anziehen, Essen, Schlafengehen – täglich dieselben
+                        Machtkämpfe, die Energie kosten und die Verbindung
+                        belasten.
                     </p>
                 </div>
                 <div class="pain-card">
                     <span class="pain-icon">🧠</span>
-                    <h3>Eigene Reaktionen verstehen</h3>
+                    <h3>Ungewollte Reaktionen</h3>
                     <p>
-                        Oft reagieren wir lauter oder ungeduldiger, als wir es
-                        uns in unserer Rolle als Elternteil eigentlich
-                        vornehmen.
+                        Und danach das schlechte Gewissen. Das Gefühl: Ich
+                        müsste das doch besser hinbekommen. Du bist damit nicht
+                        allein.
                     </p>
                 </div>
             </div>
@@ -164,12 +169,14 @@ const schema = {
                             was entwicklungspsychologisch in deinem Kind vorgeht.
                         </li>
                         <li>
-                            <strong>Innere Friedensarbeit:</strong> Erkenne deine
-                            eigenen Trigger und lerne, aus der Ruhe heraus zu reagieren.
+                            <strong>Eigene Trigger erkennen:</strong> Erkenne, was
+                            deine eigenen Reaktionen auslöst – und lerne, aus der
+                            Ruhe heraus zu antworten.
                         </li>
                         <li>
-                            <strong>Alltagswerkzeuge:</strong> Keine unpraktischen
-                            Theorien, sondern sofort anwendbare Sätze und Handlungsalternativen.
+                            <strong>Sofort anwendbare Werkzeuge:</strong> Keine unpraktischen
+                            Theorien, sondern konkret umsetzbare Sätze für deinen
+                            Alltag.
                         </li>
                     </ul>
                     <a
@@ -259,17 +266,16 @@ const schema = {
                     <h3>Audio-Quick-Beratung</h3>
                     <div class="price">29 €</div>
                     <p>
-                        Ideal, wenn du ein akutes Anliegen hast oder einen
-                        ersten Impuls suchst.
+                        Du hast eine akute Situation und brauchst schnell einen
+                        konkreten Impuls.
                     </p>
                     <ul class="service-features">
-                        <li>Sende mir max. 5 Min Audio (z.B. per WhatsApp)</li>
-                        <li>
-                            Du erhältst eine ca. 10-minütige tiefgehende Antwort
-                        </li>
-                        <li>Schneller Perspektivwechsel</li>
+                        <li>Schick mir eine Sprachnachricht</li>
+                        <li>Antwort innerhalb von 48 Stunden</li>
+                        <li>Gezielte, auf euch zugeschnittene Tipps</li>
                     </ul>
-                    <a href="#kontakt" class="btn-outline">Jetzt buchen</a>
+                    <a href="#erstgespraech" class="btn-outline">Jetzt buchen</a
+                    >
                     <a
                         href="/audio-quick-beratung"
                         style="display: block; margin-top: 1rem; font-size: 0.9rem; color: var(--clr-text-secondary); text-decoration: underline;"
@@ -284,16 +290,15 @@ const schema = {
                         200 € <span class="duration">/ 2 Termine</span>
                     </div>
                     <p>
-                        Zwei separate Termine (je 100 €) mit 1 bis 4 Wochen
-                        Abstand für nachhaltige Veränderung.
+                        Zwei Zoom-Termine à 60 Min. Selbsteinfühlung im ersten
+                        Termin, Fremdeinfühlung im zweiten.
                     </p>
                     <ul class="service-features">
-                        <li>2x 60 Min. Online Beratung (Zoom)</li>
-                        <li>Inkl. Selbst- oder Fremdeinfühlung</li>
                         <li>Tiefenblick auf euer zentrales "Warum"</li>
                         <li>Direkt umsetzbare Sätze für den Alltag</li>
+                        <li>Handwerkszeug für eure Beziehung</li>
                     </ul>
-                    <a href="#kontakt" class="btn-primary w-100"
+                    <a href="#erstgespraech" class="btn-primary w-100"
                         >Termin finden</a
                     >
                     <a
@@ -309,15 +314,16 @@ const schema = {
                         300 € <span class="duration">/ 3 Termine</span>
                     </div>
                     <p>
-                        Gemeinsam wachsen. Drei Termine (je 100 €), Session 1 &
-                        2 ohne Abstand möglich.
+                        Drei Zoom-Termine. Für Elternteams, die gemeinsam in
+                        dieselbe Richtung wachsen wollen.
                     </p>
                     <ul class="service-features">
-                        <li>3x 60 Min. Online Beratung (Zoom)</li>
                         <li>Gemeinsamer Perspektivwechsel</li>
+                        <li>Selbsteinfühlung für beide Personen</li>
                         <li>Werkzeuge für euch als Elternteam</li>
                     </ul>
-                    <a href="#kontakt" class="btn-outline">Paket buchen</a>
+                    <a href="#erstgespraech" class="btn-outline">Paket buchen</a
+                    >
                     <a
                         href="/paarberatung"
                         style="display: block; margin-top: 1rem; font-size: 0.9rem; color: var(--clr-text-secondary); text-decoration: underline;"
@@ -416,25 +422,31 @@ const schema = {
     </section>
 
     <!-- 8. FINAL CTA -->
-    <section id="kontakt" class="section-light">
+    <section id="erstgespraech" class="section-light">
         <div class="container">
             <div class="contact-wrapper">
                 <div class="contact-text">
                     <h2>Dein nächster Schritt</h2>
                     <p>
-                        Lass uns gemeinsam schauen, ob die Chemie stimmt. Such
-                        dir hier direkt im Kalender deinen Termin aus – ganz
-                        unkompliziert.
+                        Lass uns gemeinsam schauen, ob die Chemie stimmt. Das
+                        kostenfreie Erstgespräch dauert 15–20 Minuten – per Zoom
+                        oder Telefon, ganz unkompliziert.
                     </p>
 
                     <div class="free-call-box">
                         <h3>Kennenlerngespräch</h3>
-                        <p class="font-bold">0,00 € (Kostenlos)</p>
+                        <p class="font-bold">Kostenlos</p>
                         <p>
-                            ca. 15-20 Minuten via Zoom oder Telefon. Wir lernen
-                            uns kurz kennen und schauen, wie ich euch helfen
-                            kann.
+                            Kein Druck, keine Verpflichtung. Nur ein ehrliches
+                            Gespräch darüber, was gerade los ist – und ob und
+                            wie ich dir helfen kann.
                         </p>
+                        <a
+                            href="mailto:hallo@gelassen-begleiten.de"
+                            class="btn-primary"
+                            style="margin-top: 1.5rem; display: inline-block;"
+                            >Jetzt Termin buchen</a
+                        >
                     </div>
 
                     <div class="contact-info mt-4">

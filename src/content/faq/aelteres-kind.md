@@ -1,5 +1,5 @@
 ---
 question: "Hilft das auch, wenn mein Kind schon älter ist?"
-answer: "Ja absolut! Bedürfnisse und Gefühle haben wir ein Leben lang. Die GFK und LilaLiebe® greifen unabhängig vom Alter, wir schauen nur gemeinsam auf die jeweilige Entwicklungsphase."
-category: "Für wen ist es geeignet"
+answer: "Ja. Grundbedürfnisse begleiten uns ein Leben lang – die Ausdrucksformen ändern sich, das Prinzip dahinter bleibt gleich. Die LilaLiebe®-Methode funktioniert vom Kleinkind bis ins Teenageralter."
+category: "Allgemein"
 ---
