@@ -20,6 +20,29 @@ const {
 		<meta name="description" content={description} />
 		<meta name="robots" content="noindex, nofollow" />
 
+		<!-- Preload Critical Fonts -->
+		<link
+			rel="preload"
+			href="/fonts/Nunito/static/Nunito-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/Nunito/static/Nunito-SemiBold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/fonts/Lora/static/Lora-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin
+		/>
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta
@@ -63,6 +86,6 @@ const {
 	</head>
 	<body>
 		<slot />
-		<script is:inline src="/script.js"></script>
+		<script is:inline defer src="/script.js"></script>
 	</body>
 </html>

@@ -136,6 +136,9 @@ const servicesSchema = [
                 src={homeData.hero.image}
                 alt="Hero Bild"
                 class="header-image"
+                fetchpriority="high"
+                loading="eager"
+                decoding="sync"
             />
         </div>
     </header>
@@ -224,6 +227,8 @@ const servicesSchema = [
                         src={homeData.methode.image}
                         alt="LilaLiebe Methode Symbolbild"
                         class="rounded-image shadow-md"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
             </div>
@@ -271,6 +276,8 @@ const servicesSchema = [
                     alt="Laura Portrait"
                     class="about-image"
                     style="width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:var(--shadow-soft);"
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
             <div class="text-block">
@@ -420,6 +427,8 @@ const servicesSchema = [
                                         src={post.data.image}
                                         alt={post.data.title}
                                         style="width: 100%; height: 100%; object-fit: cover;"
+                                        loading="lazy"
+                                        decoding="async"
                                     />
                                 </div>
                             )}
@@ -505,11 +514,16 @@ const servicesSchema = [
                         style="min-width:320px;height:700px;"
                     >
                     </div>
-                    <script
-                        type="text/javascript"
-                        src="https://assets.calendly.com/assets/external/widget.js"
-                        async
-                    ></script>
+                    <!-- Calendly widget lazy load to prevent main thread blocking -->
+                    <script type="text/javascript">
+                        setTimeout(function () {
+                            var script = document.createElement("script");
+                            script.src =
+                                "https://assets.calendly.com/assets/external/widget.js";
+                            script.async = true;
+                            document.body.appendChild(script);
+                        }, 3500); // Wait 3.5s or interaction (not implemented here) to not block initial render
+                    </script>
                     <!-- Calendly inline widget end -->
                     <p
                         style="font-size: 0.75rem; color: #999; padding: 1rem; line-height: 1.3;"
