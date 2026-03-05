@@ -50,3 +50,10 @@ Für traditionelles SEO hat man früher oft Bots blockiert, um Server-Traffic zu
 ## 8. Interne Architektur & Linkjuice
 *   Die Homepage hat die meiste Autorität ("Linkjuice"). Sie muss auf die wichtigsten Kernkategorien und "Money Pages" (Angebote) verweisen.
 *   **Siloing:** Jeder Blogpost (Content) hat die Aufgabe, Traffic einzufangen und dann gezielt (mit harten Keyword-Links im Text) auf *eine* spezifische Angebots-Seite weiterzuleiten. Es gibt keinen Content, der einfach im luftleeren Raum verpufft.
+
+## 9. Performance & Core Web Vitals (Mobile LCP)
+Google (und KIs) bestrafen langsame Seiten hart – vor allem auf mobilen Endgeräten. Astro ist von Haus aus schnell, aber Bilder und externe Skripte machen oft Probleme.
+*   **WebP-Zwang:** Original-JPGs oder PNGs sind tabu. Bilder müssen als `.webp` konvertiert und auch explizit im Code angefordert werden.
+*   **Das LCP-Bild (Largest Contentful Paint):** Das allererste Hero-Bild muss absolute Priorität haben. Es erfordert ein explizites Preload (`<link rel="preload" as="image" href="..." fetchpriority="high" />`) im `<head>` und `decoding="async"`. 
+*   **Lazy Loading:** Alle Bilder ("Below the fold"), die der Nutzer nicht sofort sieht, *müssen* das Attribut `loading="lazy"` erhalten, um die initiale Ladezeit freizuhalten.
+*   **Externe Skripte entschärfen:** Schwere Einbindungen (wie Calendly-Widgets, Tracking-Pixel) dürfen nicht das Renden der Seite blockieren. Sie müssen mit `defer` (erst nach dem HTML-Parsing ausführen) statt nur mit `async` geladen werden.
