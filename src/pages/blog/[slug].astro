@@ -1,12 +1,12 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
-import Navbar from '../../components/Navbar.astro';
-import Footer from '../../components/Footer.astro';
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map(entry => ({
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
   }));
@@ -17,25 +17,33 @@ const { Content } = await entry.render();
 
 // Provide fallback values if SEO fields are missing
 const pageTitle = entry.data.seo_title || `${entry.data.title} | Laura Drühe`;
-const pageDescription = entry.data.seo_description || entry.data.answer_capsule || `LilaLiebe® Beratung & Familiencoaching: ${entry.data.title}`;
+const pageDescription =
+  entry.data.seo_description ||
+  entry.data.answer_capsule ||
+  `LilaLiebe® Beratung & Familiencoaching: ${entry.data.title}`;
 
 // Schema Markup (Article/FAQ)
 const schema = {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": entry.data.title,
-  "description": pageDescription,
-  "author": {
+  headline: entry.data.title,
+  description: pageDescription,
+  author: {
     "@type": "Person",
-    "name": "Laura Drühe",
-    "url": "https://gelassen-begleiten.de/ueber-mich/"
-  }
+    name: "Laura Drühe",
+    url: "https://gelassen-begleiten.de/ueber-mich/",
+  },
 };
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  image={entry.data.image}
+>
   <slot name="head" slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)}
+    ></script>
   </slot>
 
   <Navbar />
@@ -45,17 +53,27 @@ const schema = {
       <div class="blog-header text-center">
         <h1>{entry.data.title}</h1>
       </div>
-      
-      {entry.data.answer_capsule && (
-        <div class="answer-capsule">
-          <p><strong>Die kurze Antwort:</strong></p>
-          <p>{entry.data.answer_capsule}</p>
-        </div>
-      )}
 
-      {entry.data.image && (
-          <img src={entry.data.image} alt={entry.data.title} class="blog-hero-image" />
-      )}
+      {
+        entry.data.answer_capsule && (
+          <div class="answer-capsule">
+            <p>
+              <strong>Die kurze Antwort:</strong>
+            </p>
+            <p>{entry.data.answer_capsule}</p>
+          </div>
+        )
+      }
+
+      {
+        entry.data.image && (
+          <img
+            src={entry.data.image}
+            alt={entry.data.title}
+            class="blog-hero-image"
+          />
+        )
+      }
 
       <div class="blog-content">
         <Content />
@@ -63,8 +81,13 @@ const schema = {
 
       <div class="cta-box text-center mt-4">
         <h3>Lass uns das gemeinsam ansehen</h3>
-        <p>Du hast gerade eine akute Situation? Schreib mir oder buche ein Erstgespräch.</p>
-        <a href="/#kontakt" class="btn-primary" style="margin-top: 1rem;">Erstgespräch vereinbaren</a>
+        <p>
+          Du hast gerade eine akute Situation? Schreib mir oder buche ein
+          Erstgespräch.
+        </p>
+        <a href="/#kontakt" class="btn-primary" style="margin-top: 1rem;"
+          >Erstgespräch vereinbaren</a
+        >
       </div>
     </article>
   </main>

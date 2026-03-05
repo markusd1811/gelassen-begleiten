@@ -1,69 +1,89 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 export async function getStaticPaths() {
-  const pagesEntries = await getCollection('pages');
-  return pagesEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
-  }));
+    const pagesEntries = await getCollection("pages");
+    return pagesEntries.map((entry) => ({
+        params: { slug: entry.slug },
+        props: { entry },
+    }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 
 // Schema.org Logic
-const isService = ['audio-quick-beratung', 'einzelcoaching', 'paarberatung'].includes(entry.slug);
+const isService = [
+    "audio-quick-beratung",
+    "einzelcoaching",
+    "paarberatung",
+].includes(entry.slug);
 let pageSchema = null;
 
 if (isService) {
     const prices = {
-        'audio-quick-beratung': '29',
-        'einzelcoaching': '200',
-        'paarberatung': '300'
+        "audio-quick-beratung": "29",
+        einzelcoaching: "200",
+        paarberatung: "300",
     };
     pageSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": entry.data.title,
-        "description": entry.data.seo_description,
-        "provider": {
+        name: entry.data.title,
+        description: entry.data.seo_description,
+        provider: {
             "@type": "Person",
-            "name": "Laura Drühe",
-            "url": "https://gelassen-begleiten.de"
+            name: "Laura Drühe",
+            url: "https://gelassen-begleiten.de",
         },
-        "offers": {
+        offers: {
             "@type": "Offer",
-            "price": prices[entry.slug],
-            "priceCurrency": "EUR"
-        }
+            price: prices[entry.slug],
+            priceCurrency: "EUR",
+        },
     };
-} else if (entry.slug === 'ueber-mich') {
+} else if (entry.slug === "ueber-mich") {
     pageSchema = {
         "@context": "https://schema.org",
         "@type": "Person",
-        "name": "Laura Drühe",
-        "url": "https://gelassen-begleiten.de",
-        "jobTitle": "Zertifizierte LilaLiebe®-Beraterin und Familiencoach",
-        "description": entry.data.seo_description,
-        "image": "https://gelassen-begleiten.de/images/laura-druehe_quadrat.jpg",
-        "knowsAbout": ["Gewaltfreie Kommunikation", "LilaLiebe® Methode", "Familiencoaching"]
+        name: "Laura Drühe",
+        url: "https://gelassen-begleiten.de",
+        jobTitle: "Zertifizierte LilaLiebe®-Beraterin und Familiencoach",
+        description: entry.data.seo_description,
+        image: "https://gelassen-begleiten.de/images/laura-druehe_quadrat.jpg",
+        knowsAbout: [
+            "Gewaltfreie Kommunikation",
+            "LilaLiebe® Methode",
+            "Familiencoaching",
+        ],
     };
 }
 ---
 
-<Layout 
-  title={`${entry.data.seo_title || entry.data.title} | Laura Drühe`}
-  description={entry.data.seo_description}
+<Layout
+    title={`${entry.data.seo_title || entry.data.title} | Laura Drühe`}
+    description={entry.data.seo_description}
+    image={entry.data.image}
 >
     <slot name="head" slot="head">
-        {pageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />}
+        {
+            pageSchema && (
+                <script
+                    type="application/ld+json"
+                    set:html={JSON.stringify(pageSchema)}
+                />
+            )
+        }
     </slot>
     <Navbar />
 
-    <header class="section-warm text-center" style="padding-top: 8rem; padding-bottom: 4rem;">
+    <header
+        class="section-warm text-center"
+        style="padding-top: 8rem; padding-bottom: 4rem;"
+    >
         <div class="container">
             <h1>{entry.data.title}</h1>
         </div>
@@ -71,15 +91,26 @@ if (isService) {
 
     <article class="section-light">
         <div class="container">
-            {entry.data.image && (
-                <img src={entry.data.image} alt={entry.data.title} style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 24px; margin-bottom: 3rem;" />
-            )}
-            <div class="content-body" style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: var(--clr-text-secondary);">
+            {
+                entry.data.image && (
+                    <img
+                        src={entry.data.image}
+                        alt={entry.data.title}
+                        style="width: 100%; max-height: 500px; object-fit: cover; border-radius: 24px; margin-bottom: 3rem;"
+                    />
+                )
+            }
+            <div
+                class="content-body"
+                style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: var(--clr-text-secondary);"
+            >
                 <Content />
             </div>
 
             <div class="text-center mt-4 pt-4">
-                <a href="/#kontakt" class="btn-primary">Jetzt Beratung anfragen</a>
+                <a href="/#kontakt" class="btn-primary"
+                    >Jetzt Beratung anfragen</a
+                >
             </div>
         </div>
     </article>
