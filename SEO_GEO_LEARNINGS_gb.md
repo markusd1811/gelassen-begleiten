@@ -26,3 +26,27 @@ Ohne Meta-Tags für Social Media (Facebook, LinkedIn, Slack, WhatsApp) ziehen si
 Die wichtigste Erkenntnis für das Texten der Zukunft: Künstliche Intelligenzen lesen ungern lange Einleitungen durch, wenn sie Nutzern eine direkte Antwort geben wollen.
 *   **Learning:** Jede wichtige Unterseite und jeder Blogpost sollte ganz oben im Frontend (und/oder im Meta-Code) eine "Answer Capsule" haben. Eine direkte Zusammenfassung (1-2 Sätze) der Antwort (z.B. "LilaLiebe ist ein Konzept von Kathy Weber, das GFK in den Erziehungsalltag integriert..."). 
 *   Diese Capsule wird im CMS als separates Pflichtfeld angelegt (`answer_capsule`) und sowohl in der UI als auch im `description`-Tag oder `FAQPage`-Schema ausgespielt.
+
+## 5. Blueprint: Die GEO/SEO-perfekte Content-Struktur
+Klassisches Blogging (lange Einleitungen, Romane über persönliche Erfahrungen) funktioniert für KI-Crawler nicht gut. Texte müssen nach dem **"Answer-First-Prinzip"** strukturiert sein:
+1.  **H1 oder H2 (Die genaue Frage):** Formuliert exakt so, wie ein Nutzer (oder Prompter) sie stellen würde.
+2.  **Die kurze Antwort (Answer Capsule):** 40–60 Wörter, die direkt die Fakten und die Lösung nennen (ohne langes Vorgeplänkel).
+3.  **Hintergrund / Das Warum:** Der detaillierte Kontext (für tiefere Informationssuche).
+4.  **Konkrete Schritte:** 3–5 praktische, nummerierte Handlungsanweisungen.
+5.  **FAQ-Sektion:** Weitere direkte Kurzfragen zur Thematik (ausgestattet mit FAQPage Schema).
+6.  **Klarer CTA:** Ein Absprungpunkt (Link) zur passenden Dienstleistung/zum Kauf.
+
+## 6. Strikte On-Page-Regeln
+Selbst beim Einsatz moderner Frameworks (Astro) gelten knallharte HTML-Regeln, die oft versehentlich durch Designentscheidungen gebrochen werden:
+*   **Die H1-Regel:** Es darf pro URL *immer nur exakt EINE H1* geben. Die H1 ist reserviert für das primäre Keyword (z.B. "Familiencoaching nach GFK") und darf nicht für emotionale Willkommensgrüße ("Herzlich Willkommen auf meiner Seite") verschwendet werden.
+*   **Die Meta-Description Formel:** Sie generiert den Klick. Aufbau: `[Problem/Schmerz] + [Die eigene Methode/Lösung] + [CTA]`. Maximal 155 Zeichen.
+
+## 7. KI-Crawler & robots.txt
+Für traditionelles SEO hat man früher oft Bots blockiert, um Server-Traffic zu sparen. Im GEO-Zeitalter ist das fatal.
+*   **Learning:** Wer in den Antworten von ChatGPT, Claude oder Perplexity erscheinen will, darf deren Crawler nicht aussperren.
+*   Zu erlauben sind u.a.: `GPTBot` (OpenAI), `ClaudeBot` (Anthropic), `PerplexityBot` / `omgili` (Perplexity) und `CCBot` (Common Crawl für Trainingsdaten).
+*   *Tipp:* Eine einfache `User-agent: *` mit `Allow: /` in der robots.txt reicht meist aus, solange nicht explizit etwas anderes konfiguriert ist.
+
+## 8. Interne Architektur & Linkjuice
+*   Die Homepage hat die meiste Autorität ("Linkjuice"). Sie muss auf die wichtigsten Kernkategorien und "Money Pages" (Angebote) verweisen.
+*   **Siloing:** Jeder Blogpost (Content) hat die Aufgabe, Traffic einzufangen und dann gezielt (mit harten Keyword-Links im Text) auf *eine* spezifische Angebots-Seite weiterzuleiten. Es gibt keinen Content, der einfach im luftleeren Raum verpufft.
