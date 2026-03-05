@@ -89,6 +89,12 @@ const servicesSchema = [
     description="Familiencoaching nach GFK und LilaLiebe® – online via Zoom, alltagstauglich und ohne Wertung. Zertifizierte LilaLiebe®-Beraterin Laura Drühe. Erstgespräch kostenlos."
 >
     <slot name="head" slot="head">
+        <link
+            rel="preload"
+            as="image"
+            href={homeData.hero.image.replace(/\.(png|jpe?g)$/i, ".webp")}
+            fetchpriority="high"
+        />
         <script type="application/ld+json" set:html={JSON.stringify(orgSchema)}
         ></script>
         <script
@@ -133,12 +139,11 @@ const servicesSchema = [
         <div class="header-image-wrapper fade-in">
             <div class="soft-shape"></div>
             <img
-                src={homeData.hero.image}
+                src={homeData.hero.image.replace(/\.(png|jpe?g)$/i, ".webp")}
                 alt="Hero Bild"
                 class="header-image"
                 fetchpriority="high"
-                loading="eager"
-                decoding="sync"
+                decoding="async"
             />
         </div>
     </header>
@@ -224,7 +229,10 @@ const servicesSchema = [
                 </div>
                 <div class="image-box">
                     <img
-                        src={homeData.methode.image}
+                        src={homeData.methode.image.replace(
+                            /\.(png|jpe?g)$/i,
+                            ".webp"
+                        )}
                         alt="LilaLiebe Methode Symbolbild"
                         class="rounded-image shadow-md"
                         loading="lazy"
@@ -272,12 +280,15 @@ const servicesSchema = [
         <div class="container grid-2 align-center">
             <div class="image-box text-center">
                 <img
-                    src={homeData.about.image}
+                    src={homeData.about.image.replace(
+                        /\.(png|jpe?g)$/i,
+                        ".webp"
+                    )}
                     alt="Laura Portrait"
                     class="about-image"
-                    style="width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:var(--shadow-soft);"
                     loading="lazy"
                     decoding="async"
+                    style="width:80%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; box-shadow:var(--shadow-soft);"
                 />
             </div>
             <div class="text-block">
@@ -424,11 +435,14 @@ const servicesSchema = [
                             {post.data.image && (
                                 <div style="margin: -2rem -2rem 1.5rem -2rem; border-radius: 20px 20px 0 0; overflow: hidden; height: 180px;">
                                     <img
-                                        src={post.data.image}
+                                        src={post.data.image.replace(
+                                            /\.(png|jpe?g)$/i,
+                                            ".webp"
+                                        )}
                                         alt={post.data.title}
-                                        style="width: 100%; height: 100%; object-fit: cover;"
                                         loading="lazy"
                                         decoding="async"
+                                        style="width: 100%; height: 100%; object-fit: cover;"
                                     />
                                 </div>
                             )}
@@ -514,16 +528,11 @@ const servicesSchema = [
                         style="min-width:320px;height:700px;"
                     >
                     </div>
-                    <!-- Calendly widget lazy load to prevent main thread blocking -->
-                    <script type="text/javascript">
-                        setTimeout(function () {
-                            var script = document.createElement("script");
-                            script.src =
-                                "https://assets.calendly.com/assets/external/widget.js";
-                            script.async = true;
-                            document.body.appendChild(script);
-                        }, 3500); // Wait 3.5s or interaction (not implemented here) to not block initial render
-                    </script>
+                    <script
+                        type="text/javascript"
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        defer
+                    ></script>
                     <!-- Calendly inline widget end -->
                     <p
                         style="font-size: 0.75rem; color: #999; padding: 1rem; line-height: 1.3;"

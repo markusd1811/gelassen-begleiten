@@ -23,8 +23,7 @@
 
 ## 1. Ausgangslage & Strategie
 
-### Ist-Zustand (Startseite)
-*(Bezieht sich auf die erste Analyse der bestehenden Homepage, bevor die neuen Unterseiten live gingen)*
+### Ist-Zustand
 
 - Aktuelle Website ist eine **Single-Page-Scrollseite** (alle Inhalte auf einer URL)
 - Kein Blog / kein Content-Hub
@@ -43,7 +42,7 @@ Das Suchvolumen für LilaLiebe®-Begriffe wächst mit der Bekanntheit von Kathy 
 
 ---
 
-## 2. Neue Website-Architektur [GILT FÜR DIE GESAMTE WEBSITE]
+## 2. Neue Website-Architektur
 
 Die Website muss von einer Single-Page zu einer **Multi-Page-Struktur** erweitert werden. Jede URL ist eine eigenständige Ranking-Einheit.
 
@@ -74,7 +73,7 @@ gelassen-begleiten.de/
 
 ---
 
-## 3. Keyword-Zuweisung je Seite [GILT FÜR DIE GESAMTE WEBSITE]
+## 3. Keyword-Zuweisung je Seite
 
 | URL | Primäres Keyword | Sekundäre Keywords |
 |-----|------------------|--------------------|
@@ -96,7 +95,7 @@ gelassen-begleiten.de/
 
 ---
 
-## 4. Technisches SEO-Checkliste [GILT FÜR DIE GESAMTE WEBSITE]
+## 4. Technisches SEO-Checkliste
 
 ### Sofort umzusetzen (Woche 1)
 
@@ -130,11 +129,9 @@ gelassen-begleiten.de/
 
 ---
 
-## 5. Schema Markup – Implementierung [GILT FÜR DIE GESAMTE WEBSITE & STARTSEITE]
+## 5. Schema Markup – Implementierung
 
-*Wichtig zur Unterscheidung: Einige Schemas müssen zwingend auf jeder Seite sein, andere gehören strikt nur auf eine bestimmte Seite.*
-
-### 5.1 FAQPage Schema [GILT FÜR EINZELNE UNTERSEITEN & BLOGPOSTS]
+### 5.1 FAQPage Schema (auf `/faq/` und allen Blog-Seiten)
 
 ```json
 {
@@ -162,7 +159,7 @@ gelassen-begleiten.de/
 }
 ```
 
-### 5.2 Service Schema [GILT SPEZIFISCH FÜR STARTSEITE & ANGEBOTS-UNTERSEITEN]
+### 5.2 Service Schema (auf jeder Angebotsseite)
 
 ```json
 {
@@ -189,7 +186,7 @@ gelassen-begleiten.de/
 }
 ```
 
-### 5.3 Person Schema [GILT SPEZIFISCH FÜR STARTSEITE & ÜBER-MICH SEITE]
+### 5.3 Person Schema (auf `/ueber-mich/` und Homepage)
 
 ```json
 {
@@ -213,7 +210,7 @@ gelassen-begleiten.de/
 }
 ```
 
-### 5.4 LocalBusiness Schema / Organization [GILT EXKLUSIV FÜR DIE STARTSEITE]
+### 5.4 LocalBusiness Schema (Homepage)
 
 ```json
 {
@@ -233,7 +230,7 @@ gelassen-begleiten.de/
 
 ---
 
-## 6. On-Page-Regeln (Title, Meta, H1) [GILT FÜR DIE GESAMTE WEBSITE]
+## 6. On-Page-Regeln für alle Seiten
 
 ### Title-Tag-Format
 
@@ -277,7 +274,7 @@ Kein leerer Alt-Text. Kein Alt-Text wie „Bild1.jpg".
 
 ---
 
-## 7. GEO: Answer-First-Prinzip [GILT FÜR DIE GESAMTE WEBSITE, INSBESONDERE BLOGS]
+## 7. GEO: Answer-First-Prinzip
 
 Alle neuen Seiten und Blog-Artikel folgen dieser Struktur. Damit werden sie von ChatGPT, Perplexity und Google AI Overviews bevorzugt zitiert.
 
@@ -323,7 +320,7 @@ Antwort (40–60 Wörter)
 
 ---
 
-## 8. robots.txt – Anforderung [GILT FÜR DIE GESAMTE WEBSITE]
+## 8. robots.txt – Anforderung
 
 Aktuelle robots.txt prüfen. Folgende AI-Crawler dürfen **nicht** blockiert sein:
 
