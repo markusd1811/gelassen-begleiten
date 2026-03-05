@@ -28,7 +28,7 @@ if (isService) {
         "audio-quick-beratung": "29",
         einzelcoaching: "200",
         paarberatung: "300",
-    };
+    } as const;
     pageSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -41,7 +41,7 @@ if (isService) {
         },
         offers: {
             "@type": "Offer",
-            price: prices[entry.slug],
+            price: prices[entry.slug as keyof typeof prices],
             priceCurrency: "EUR",
         },
     };
@@ -61,6 +61,84 @@ if (isService) {
         ],
     };
 }
+
+// --- FAQ Auto-Extraction from Markdown Body ---
+const rawBody = entry.body || "";
+const lines = rawBody.split("\n");
+const faqQuestions = [];
+let currentQuestion = null;
+let currentAnswer = [];
+let inFaqSection = false;
+
+for (const line of lines) {
+    const trimmed = line.trim();
+
+    if (trimmed.startsWith("## ") && trimmed.toLowerCase().includes("fragen")) {
+        inFaqSection = true;
+        continue;
+    }
+
+    if (!inFaqSection) continue;
+
+    // Stop FAQ parsing if we hit a horizontal rule or a new primary/secondary heading
+    if (
+        trimmed === "---" ||
+        (trimmed.startsWith("## ") && !trimmed.toLowerCase().includes("fragen"))
+    ) {
+        if (currentQuestion) {
+            faqQuestions.push({
+                question: currentQuestion,
+                answer: currentAnswer.join("\n").trim(),
+            });
+            currentQuestion = null;
+            currentAnswer = [];
+        }
+        inFaqSection = false;
+        continue;
+    }
+
+    // Detect bold question
+    if (
+        trimmed.startsWith("**") &&
+        trimmed.endsWith("**") &&
+        trimmed.includes("?")
+    ) {
+        if (currentQuestion) {
+            faqQuestions.push({
+                question: currentQuestion,
+                answer: currentAnswer.join("\n").trim(),
+            });
+        }
+        currentQuestion = trimmed.replace(/^\*\*|\*\*$/g, "");
+        currentAnswer = [];
+    } else if (currentQuestion && trimmed !== "") {
+        // If it's a list or paragraph, add it to the answer
+        currentAnswer.push(trimmed);
+    }
+}
+// Push the last question if the file ended while parsing FAQs
+if (currentQuestion) {
+    faqQuestions.push({
+        question: currentQuestion,
+        answer: currentAnswer.join("\n").trim(),
+    });
+}
+
+let faqSchema = null;
+if (faqQuestions.length > 0) {
+    faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqQuestions.map((q) => ({
+            "@type": "Question",
+            name: q.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: q.answer,
+            },
+        })),
+    };
+}
 ---
 
 <Layout
@@ -74,6 +152,14 @@ if (isService) {
                 <script
                     type="application/ld+json"
                     set:html={JSON.stringify(pageSchema)}
+                />
+            )
+        }
+        {
+            faqSchema && (
+                <script
+                    type="application/ld+json"
+                    set:html={JSON.stringify(faqSchema)}
                 />
             )
         }
