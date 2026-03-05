@@ -30,32 +30,58 @@ const faqSchema = {
     })),
 };
 
-const schema = {
+const orgSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-        {
-            "@type": "LocalBusiness",
-            name: "Laura Drühe - Gelassen begleiten",
-            image: "https://gelassen-begleiten.de/images/logo_gb.png",
-            email: "hallo@gelassen-begleiten.de",
-            address: {
-                "@type": "PostalAddress",
-                streetAddress: "Sachsenweg 53a",
-                addressLocality: "Hamburg",
-                postalCode: "22455",
-                addressCountry: "DE",
-            },
-            url: "https://gelassen-begleiten.de",
-        },
-        {
-            "@type": "Person",
-            name: "Laura Drühe",
-            jobTitle: "Familiencoach nach GFK",
-            url: "https://gelassen-begleiten.de",
-            image: "https://gelassen-begleiten.de/images/laura-druehe_quadrat.jpg",
-        },
+    "@type": "Organization",
+    name: "Laura Drühe - Gelassen begleiten",
+    url: "https://gelassen-begleiten.de",
+    logo: "https://gelassen-begleiten.de/images/logo_gb.png",
+    email: "hallo@gelassen-begleiten.de",
+};
+
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Laura Drühe",
+    jobTitle: "Familiencoach nach GFK",
+    url: "https://gelassen-begleiten.de",
+    image: "https://gelassen-begleiten.de/images/laura-druehe_quadrat.jpg",
+    knowsAbout: [
+        "Gewaltfreie Kommunikation",
+        "LilaLiebe® Methode",
+        "Familiencoaching",
     ],
 };
+
+const servicesSchema = [
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Audio-Quick-Beratung",
+        description:
+            "Du hast eine akute Situation und brauchst schnell einen konkreten Impuls per Sprachnachricht.",
+        provider: { "@type": "Person", name: "Laura Drühe" },
+        offers: { "@type": "Offer", price: "29", priceCurrency: "EUR" },
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "1:1-Coaching",
+        description:
+            "Zwei Zoom-Termine à 60 Min. Selbsteinfühlung im ersten Termin, Fremdeinfühlung im zweiten.",
+        provider: { "@type": "Person", name: "Laura Drühe" },
+        offers: { "@type": "Offer", price: "200", priceCurrency: "EUR" },
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        name: "Paarberatung",
+        description:
+            "Drei Zoom-Termine. Für Elternteams, die gemeinsam in dieselbe Richtung wachsen wollen.",
+        provider: { "@type": "Person", name: "Laura Drühe" },
+        offers: { "@type": "Offer", price: "300", priceCurrency: "EUR" },
+    },
+];
 ---
 
 <Layout
@@ -63,7 +89,15 @@ const schema = {
     description="Familiencoaching nach GFK und LilaLiebe® – online via Zoom, alltagstauglich und ohne Wertung. Zertifizierte LilaLiebe®-Beraterin Laura Drühe. Erstgespräch kostenlos."
 >
     <slot name="head" slot="head">
-        <script type="application/ld+json" set:html={JSON.stringify(schema)}
+        <script type="application/ld+json" set:html={JSON.stringify(orgSchema)}
+        ></script>
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(personSchema)}
+        ></script>
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(servicesSchema)}
         ></script>
         <script type="application/ld+json" set:html={JSON.stringify(faqSchema)}
         ></script>
