@@ -28,6 +28,12 @@ const schema = {
   "@type": "Article",
   headline: entry.data.title,
   description: pageDescription,
+  datePublished: entry.data.date
+    ? new Date(entry.data.date).toISOString()
+    : undefined,
+  dateModified: entry.data.date
+    ? new Date(entry.data.date).toISOString()
+    : undefined,
   author: {
     "@type": "Person",
     name: "Laura Drühe",
