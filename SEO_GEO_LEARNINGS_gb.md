@@ -57,3 +57,8 @@ Google (und KIs) bestrafen langsame Seiten hart – vor allem auf mobilen Endger
 *   **Das LCP-Bild (Largest Contentful Paint):** Das allererste Hero-Bild muss absolute Priorität haben. Es erfordert ein explizites Preload (`<link rel="preload" as="image" href="..." fetchpriority="high" />`) im `<head>` und `decoding="async"`. 
 *   **Lazy Loading:** Alle Bilder ("Below the fold"), die der Nutzer nicht sofort sieht, *müssen* das Attribut `loading="lazy"` erhalten, um die initiale Ladezeit freizuhalten.
 *   **Externe Skripte entschärfen:** Schwere Einbindungen (wie Calendly-Widgets, Tracking-Pixel) dürfen nicht das Renden der Seite blockieren. Sie müssen mit `defer` (erst nach dem HTML-Parsing ausführen) statt nur mit `async` geladen werden.
+
+## 10. Article Schema & E-E-A-T-Signale
+Google und KI-Systeme bevorzugen Inhalte mit klarer Autorenschaft und Aktualität.
+*   **Learning:** Blog-Posts und Artikel müssen zwingend ein sauberes `Article` oder `BlogPosting` JSON-LD Schema erhalten.
+*   **Pflichtfelder:** Dieses Schema muss zwingend `author` (mit `@type: "Person"` und Namen), `datePublished` und idealerweise `dateModified` enthalten. Das sendet starke E-E-A-T-Signale (Experience, Expertise, Authoritativeness, and Trustworthiness). Ohne diese Zuordnung bewerten moderne Scanner (und KIs) Content oft als minderwertig oder "autorenlos".
